@@ -16,6 +16,7 @@ public class Patient {
     private String apartmentNumber;
     private String phoneNumber;
     private String email;
+    private String medicalExam;
     @OneToOne(mappedBy = "patient")
     private PatientCard patientCard;
 
@@ -89,5 +90,13 @@ public class Patient {
 
     public void setPatientCard(PatientCard patientCard) {
         this.patientCard = patientCard;
+    }
+
+    public String getMedicalExam() {
+        return medicalExam;
+    }
+
+    public void setMedicalExam(String medicalExam) {
+        this.medicalExam = medicalExam;
     }
 }

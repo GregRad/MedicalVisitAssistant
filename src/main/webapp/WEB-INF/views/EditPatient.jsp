@@ -30,6 +30,8 @@
         <form:input path="phoneNumber"/><br/>
         E-mail:<br/>
         <form:input path="email"/><br/>
+        Badanie:<br/>
+        <form:textarea path="medicalExam"/><br/>
         <input type="submit" value="Zapisz"/>
     </form:form>
 </div>

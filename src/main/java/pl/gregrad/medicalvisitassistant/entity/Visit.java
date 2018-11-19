@@ -17,7 +17,6 @@ public class Visit {
     @OneToOne
     private Patient patient;
 
-
     public Long getId() {
         return id;
     }

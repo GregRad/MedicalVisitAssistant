@@ -10,6 +10,7 @@ public class PatientDTO {
     private String apartmentNumber;
     private String phoneNumber;
     private String email;
+    private String medicalExam;
 
     public Long getId() {
         return id;
@@ -73,5 +74,13 @@ public class PatientDTO {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public String getMedicalExam() {
+        return medicalExam;
+    }
+
+    public void setMedicalExam(String medicalExam) {
+        this.medicalExam = medicalExam;
     }
 }

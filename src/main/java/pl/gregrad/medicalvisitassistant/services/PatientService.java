@@ -26,6 +26,7 @@ public class PatientService {
         String apartmentNumber = patientForm.getApartmentNumber();
         String phoneNumber = patientForm.getPhoneNumber();
         String email = patientForm.getEmail();
+        String medicalExam = patientForm.getMedicalExam();
 
         Patient newPatient = new Patient();
         newPatient.setName(name);
@@ -35,6 +36,7 @@ public class PatientService {
         newPatient.setApartmentNumber(apartmentNumber);
         newPatient.setPhoneNumber(phoneNumber);
         newPatient.setEmail(email);
+        newPatient.setMedicalExam(medicalExam);
 
         patientRepository.save(newPatient);
     }
