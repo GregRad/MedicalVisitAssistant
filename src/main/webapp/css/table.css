@@ -1,0 +1,20 @@
+body {
+
+    background: hsl(120, 40%, 60%);
+    padding-top: 150px;
+    font: normal 18px Sniglet; color: white;
+    text-align: center;
+}
+table {
+    background: white;
+    outline: none;
+    font: inherit;
+    text-align: center;
+    color: hsl(120, 40%, 30%);
+    width: 100%;
+    padding: 0 10px;
+}
+th, td {
+    border-bottom: 1px solid #ddd;
+}
+h2 {font-weight: normal; font-size: 36px; margin-bottom: 75px;}
