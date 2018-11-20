@@ -20,11 +20,6 @@
     <th>ID</th>
     <th>Imię</th>
     <th>Nazwisko</th>
-    <th>Ulica</th>
-    <th>Numer domu</th>
-    <th>Numer mieszkania</th>
-    <th>Numer telefonu</th>
-    <th>Email</th>
     <th>Wyświetl kartę</th>
     <th>Dodaj wizytę</th>
     <th>Edytuj</th>
@@ -42,22 +37,7 @@
                         ${patient.surname}
                 </td>
                 <td>
-                        ${patient.address}
-                </td>
-                <td>
-                        ${patient.houseNumber}
-                </td>
-                <td>
-                        ${patient.apartmentNumber}
-                </td>
-                <td>
-                        ${patient.phoneNumber}
-                </td>
-                <td>
-                        ${patient.email}
-                </td>
-                <td>
-                        <a href="/patientcard/${patient.id}">wyświetl</a>
+                        <a href="/patients/card/${patient.id}">wyświetl</a>
                 </td>
                 <td>
                         <a href="/visit/addVisit/${patient.id}">dodaj</a>

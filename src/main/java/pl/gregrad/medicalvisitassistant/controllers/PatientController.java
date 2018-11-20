@@ -34,6 +34,12 @@ public class PatientController {
         model.addAttribute("patients", allPatients );
         return "PatientList";
     }
+    @GetMapping("/card/{id}")
+    public String showPatientsCard(@PathVariable Long id, Model model) {
+        Patient patient = patientService.findById(id);
+        model.addAttribute("patients", patient);
+        return "PatientCard";
+    }
     @GetMapping("/edit/{id}")
     public String patientToEdit(@PathVariable Long id, Model model) {
         model.addAttribute("editForm", patientService.findById(id));

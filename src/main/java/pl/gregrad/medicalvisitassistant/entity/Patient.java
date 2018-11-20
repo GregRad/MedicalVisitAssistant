@@ -17,8 +17,6 @@ public class Patient {
     private String phoneNumber;
     private String email;
     private String medicalExam;
-    @OneToOne(mappedBy = "patient")
-    private PatientCard patientCard;
 
     public Long getId() {
         return id;
@@ -82,14 +80,6 @@ public class Patient {
 
     public void setEmail(String email) {
         this.email = email;
-    }
-
-    public PatientCard getPatientCard() {
-        return patientCard;
-    }
-
-    public void setPatientCard(PatientCard patientCard) {
-        this.patientCard = patientCard;
     }
 
     public String getMedicalExam() {

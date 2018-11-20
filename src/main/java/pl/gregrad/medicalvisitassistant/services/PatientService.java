@@ -52,6 +52,7 @@ public class PatientService {
     public void delete(Long id) {
         patientRepository.delete(patientRepository.findById(id));
     }
+
     public void edit(Patient patient) {
         patientRepository.save(patient);
     }

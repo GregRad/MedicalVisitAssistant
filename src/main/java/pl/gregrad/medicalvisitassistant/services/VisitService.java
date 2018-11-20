@@ -50,7 +50,6 @@ public class VisitService {
             }
             v.setPatientDetails(v.getPatient().getName() + " " + v.getPatient().getSurname());
         }
-//        allPatients.forEach(visit -> visit.setPatientDetails(visit.getPatient().getName() + " " + visit.getPatient().getSurname()));
         return allPatients;
     }
     public VisitDTO findById(Long id){
