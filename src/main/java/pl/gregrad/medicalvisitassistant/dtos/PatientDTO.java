@@ -83,4 +83,5 @@ public class PatientDTO {
     public void setMedicalExam(String medicalExam) {
         this.medicalExam = medicalExam;
     }
+
 }

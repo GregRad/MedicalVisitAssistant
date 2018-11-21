@@ -9,5 +9,5 @@ public interface VisitRepository extends JpaRepository <Visit, Long> {
 
     List<Visit> findAll ();
     Visit findById (Long id);
-    Visit findByPatientId (Long id);
+    List<Visit> findByPatientId (Long id);
 }

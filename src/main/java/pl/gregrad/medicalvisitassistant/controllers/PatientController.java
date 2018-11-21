@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.*;
 import pl.gregrad.medicalvisitassistant.dtos.PatientDTO;
 import pl.gregrad.medicalvisitassistant.entity.Patient;
 import pl.gregrad.medicalvisitassistant.services.PatientService;
+import pl.gregrad.medicalvisitassistant.services.VisitService;
 
 import java.util.List;
 

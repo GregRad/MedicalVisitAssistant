@@ -52,6 +52,10 @@ public class VisitService {
         }
         return allPatients;
     }
+    public List<Visit> findByPatientId (Long id){
+        List<Visit> patientVisits = visitRepository.findByPatientId(id);
+        return patientVisits;
+    }
     public VisitDTO findById(Long id){
          Visit entity = visitRepository.findById(id);
          VisitDTO newVisitEdit = new VisitDTO();

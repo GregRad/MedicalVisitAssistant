@@ -16,6 +16,7 @@
     </style>
 </head>
 <body>
+<h2>Karta Pacjenta</h2>
 <table align="center">
     <th>ID</th>
     <th>Imię</th>
@@ -25,7 +26,7 @@
     <th>Numer mieszkania</th>
     <th>Numer telefonu</th>
     <th>Email</th>
-    <th>Badanie</th>
+
         <tr>
             <td>
                     ${patients.id}
@@ -51,10 +52,17 @@
             <td>
                     ${patients.email}
             </td>
-            <td>
-                    ${patients.medicalExam}
-            </td>
+
         </tr>
+</table>
+<br/>
+<table>
+    <th>Badanie</th>
+    <tr>
+        <td>
+            ${patients.medicalExam}
+        </td>
+    </tr>
 </table>
 <br/>
 <table>
@@ -63,7 +71,8 @@
     </th>
         <tr>
             <td>
-                test
+                <%--<iframe src="/visit/patientVisit/${patients.id}"></iframe>--%>
+                <a href="/visit/patientVisit/${patients.id}">wyświetl</a>
             </td>
         </tr>
     </th>

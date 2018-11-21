@@ -18,6 +18,7 @@ public class Patient {
     private String email;
     private String medicalExam;
 
+
     public Long getId() {
         return id;
     }
@@ -89,4 +90,5 @@ public class Patient {
     public void setMedicalExam(String medicalExam) {
         this.medicalExam = medicalExam;
     }
+
 }
