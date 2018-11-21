@@ -1,11 +1,11 @@
-package pl.gregrad.medicalvisitassistant.services;
+package pl.gregrad.medicalvisitassistant.services.Basic;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import pl.gregrad.medicalvisitassistant.dtos.PatientDTO;
-import pl.gregrad.medicalvisitassistant.entity.Patient;
-import pl.gregrad.medicalvisitassistant.repositories.PatientRepository;
+import pl.gregrad.medicalvisitassistant.dtos.Basic.PatientDTO;
+import pl.gregrad.medicalvisitassistant.entity.Basic.Patient;
+import pl.gregrad.medicalvisitassistant.repositories.Basic.PatientRepository;
 
 import javax.transaction.Transactional;
 import java.util.List;

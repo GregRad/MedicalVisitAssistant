@@ -1,14 +1,13 @@
-package pl.gregrad.medicalvisitassistant.controllers;
+package pl.gregrad.medicalvisitassistant.controllers.PatientControllers;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
-import pl.gregrad.medicalvisitassistant.dtos.PatientDTO;
-import pl.gregrad.medicalvisitassistant.entity.Patient;
-import pl.gregrad.medicalvisitassistant.services.PatientService;
-import pl.gregrad.medicalvisitassistant.services.VisitService;
+import pl.gregrad.medicalvisitassistant.dtos.Basic.PatientDTO;
+import pl.gregrad.medicalvisitassistant.entity.Basic.Patient;
+import pl.gregrad.medicalvisitassistant.services.Basic.PatientService;
 
 import java.util.List;
 

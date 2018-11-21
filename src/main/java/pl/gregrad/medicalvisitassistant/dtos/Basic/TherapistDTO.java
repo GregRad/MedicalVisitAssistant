@@ -1,4 +1,4 @@
-package pl.gregrad.medicalvisitassistant.dtos.Therapist;
+package pl.gregrad.medicalvisitassistant.dtos.Basic;
 
 import java.util.Objects;
 

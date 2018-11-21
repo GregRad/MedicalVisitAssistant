@@ -9,9 +9,21 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Title</title>
+    <title>Statystyki</title>
+    <style><%@include file="/css/table.css"%></style>
 </head>
 <body>
-
+    <table>
+        <th>Ilość wizyt</th>
+        <th>Dochód</th>
+        <tr>
+            <td>
+                0
+            </td>
+            <td>
+                0
+            </td>
+        </tr>
+    </table>
 </body>
 </html>

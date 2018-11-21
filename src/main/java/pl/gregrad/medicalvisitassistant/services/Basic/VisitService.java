@@ -1,13 +1,12 @@
-package pl.gregrad.medicalvisitassistant.services;
+package pl.gregrad.medicalvisitassistant.services.Basic;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import pl.gregrad.medicalvisitassistant.dtos.PatientDTO;
-import pl.gregrad.medicalvisitassistant.dtos.VisitDTO;
-import pl.gregrad.medicalvisitassistant.entity.Patient;
-import pl.gregrad.medicalvisitassistant.entity.Visit;
-import pl.gregrad.medicalvisitassistant.repositories.PatientRepository;
-import pl.gregrad.medicalvisitassistant.repositories.VisitRepository;
+import pl.gregrad.medicalvisitassistant.dtos.Basic.VisitDTO;
+import pl.gregrad.medicalvisitassistant.entity.Basic.Patient;
+import pl.gregrad.medicalvisitassistant.entity.Basic.Visit;
+import pl.gregrad.medicalvisitassistant.repositories.Basic.PatientRepository;
+import pl.gregrad.medicalvisitassistant.repositories.Basic.VisitRepository;
 
 import javax.transaction.Transactional;
 import java.time.LocalDateTime;
@@ -66,7 +65,6 @@ public class VisitService {
 
          return newVisitEdit;
     }
-
     public void delete (Long id) {
         visitRepository.delete(visitRepository.findById(id));
     }

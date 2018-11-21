@@ -1,21 +1,18 @@
-package pl.gregrad.medicalvisitassistant.entity;
+package pl.gregrad.medicalvisitassistant.dtos.Basic;
 
-import javax.persistence.*;
+import sun.util.resources.ga.LocaleNames_ga;
+
 import java.time.LocalDateTime;
 
-@Entity
-@Table(name = "Visit")
-public class Visit {
+public class VisitDTO {
 
-    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @Transient
     private String patientDetails;
     private LocalDateTime visitDate;
     private Integer charge;
     private String visitDescription;
-    @OneToOne
-    private Patient patient;
+    private Long patientId;
+
 
     public Long getId() {
         return id;
@@ -53,15 +50,15 @@ public class Visit {
         return patientDetails;
     }
 
-    public void setPatientDetails(String paatientDetails) {
-        this.patientDetails = paatientDetails;
+    public void setPatientDetails(String patientDetails) {
+        this.patientDetails = patientDetails;
     }
 
-    public Patient getPatient() {
-        return patient;
+    public Long getPatientId() {
+        return patientId;
     }
 
-    public void setPatient(Patient patient) {
-        this.patient = patient;
+    public void setPatientId(Long patientId) {
+        this.patientId = patientId;
     }
 }

@@ -1,4 +1,4 @@
-package pl.gregrad.medicalvisitassistant.dtos;
+package pl.gregrad.medicalvisitassistant.dtos.Login;
 
 import org.hibernate.validator.constraints.NotBlank;
 

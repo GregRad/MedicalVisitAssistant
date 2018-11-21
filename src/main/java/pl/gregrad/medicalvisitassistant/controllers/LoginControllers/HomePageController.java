@@ -1,10 +1,10 @@
-package pl.gregrad.medicalvisitassistant.controllers;
+package pl.gregrad.medicalvisitassistant.controllers.LoginControllers;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.SessionAttribute;
-import pl.gregrad.medicalvisitassistant.dtos.Therapist.TherapistDTO;
+import pl.gregrad.medicalvisitassistant.dtos.Basic.TherapistDTO;
 
 @Controller
 @RequestMapping("/")

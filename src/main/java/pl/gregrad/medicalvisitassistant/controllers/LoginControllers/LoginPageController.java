@@ -4,8 +4,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
-import pl.gregrad.medicalvisitassistant.dtos.LoginFormDTO;
-import pl.gregrad.medicalvisitassistant.dtos.Therapist.TherapistDTO;
+import pl.gregrad.medicalvisitassistant.dtos.Login.LoginFormDTO;
+import pl.gregrad.medicalvisitassistant.dtos.Basic.TherapistDTO;
 import pl.gregrad.medicalvisitassistant.services.LoginServices.LoginService;
 
 import javax.servlet.http.HttpSession;

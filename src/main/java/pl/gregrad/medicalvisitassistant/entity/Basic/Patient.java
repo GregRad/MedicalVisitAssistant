@@ -1,4 +1,4 @@
-package pl.gregrad.medicalvisitassistant.entity;
+package pl.gregrad.medicalvisitassistant.entity.Basic;
 
 
 import javax.persistence.*;
