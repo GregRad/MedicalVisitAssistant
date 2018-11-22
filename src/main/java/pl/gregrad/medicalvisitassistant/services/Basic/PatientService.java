@@ -3,7 +3,7 @@ package pl.gregrad.medicalvisitassistant.services.Basic;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import pl.gregrad.medicalvisitassistant.dtos.Basic.PatientDTO;
+import pl.gregrad.medicalvisitassistant.dtos.Basic.PatientAddDTO;
 import pl.gregrad.medicalvisitassistant.entity.Basic.Patient;
 import pl.gregrad.medicalvisitassistant.repositories.Basic.PatientRepository;
 
@@ -17,7 +17,7 @@ public class PatientService {
     @Autowired
     private PatientRepository patientRepository;
 
-    public void addPatient (PatientDTO patientForm) {
+    public void addPatient (PatientAddDTO patientForm) {
 
         String name = patientForm.getName();
         String surname = patientForm.getSurname();
@@ -26,7 +26,15 @@ public class PatientService {
         String apartmentNumber = patientForm.getApartmentNumber();
         String phoneNumber = patientForm.getPhoneNumber();
         String email = patientForm.getEmail();
-        String medicalExam = patientForm.getMedicalExam();
+        String exam = patientForm.getExam();
+        String diagnosis = patientForm.getDiagnosis() ;
+        String symptoms = patientForm.getSymptoms();
+        String diseases = patientForm.getDiseases();
+        String rehab = patientForm.getRehab();
+        String functioning = patientForm.getFunctioning();
+        String medicines = patientForm.getProcedures();
+        String procedures = patientForm.getMedicines();
+        String drugs = patientForm.getDrugs();
 
         Patient newPatient = new Patient();
         newPatient.setName(name);
@@ -36,15 +44,22 @@ public class PatientService {
         newPatient.setApartmentNumber(apartmentNumber);
         newPatient.setPhoneNumber(phoneNumber);
         newPatient.setEmail(email);
-        newPatient.setMedicalExam(medicalExam);
+        newPatient.setExam(exam);
+        newPatient.setDiagnosis(diagnosis);
+        newPatient.setSymptoms(symptoms);
+        newPatient.setDiseases(diseases);
+        newPatient.setRehab(rehab);
+        newPatient.setFunctioning(functioning);
+        newPatient.setProcedures(medicines);
+        newPatient.setMedicines(procedures);
+        newPatient.setDrugs(drugs);
 
         patientRepository.save(newPatient);
+
     }
 
-    public List<Patient> findAllPatients() {
-        List<Patient> allPatients = patientRepository.findAll();
-        return allPatients;
-    }
+    public List<Patient> findAllPatients() { List<Patient> allPatients = patientRepository.findAll();return allPatients; }
+
     public Patient findById(Long id) {
         return patientRepository.findById(id);
     }

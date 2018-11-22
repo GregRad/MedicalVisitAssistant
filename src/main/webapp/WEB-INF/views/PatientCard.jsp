@@ -57,10 +57,47 @@
 </table>
 <br/>
 <table>
-    <th>Badanie</th>
+    <th>Rozpoznanie:</th>
+    <th>Objawy:</th>
+    <th>Choroby współistniejące:</th>
+    <th>Funkcjonowanie:</th>
+    <th>Dotychczasowa rehabilitacja:</th>
+    <th>Leki:</th>
+    <th>Zabiegi operacyjne, urazy:</th>
+    <th>Używki:</th>
     <tr>
         <td>
-            ${patients.medicalExam}
+            ${patients.diagnosis}
+        </td>
+        <td>
+            ${patients.symptoms}
+        </td>
+        <td>
+            ${patients.diseases}
+        </td>
+        <td>
+            ${patients.functioning}
+        </td>
+        <td>
+            ${patients.rehab}
+        </td>
+        <td>
+            ${patients.medicines}
+        </td>
+        <td>
+            ${patients.procedures}
+        </td>
+        <td>
+            ${patients.drugs}
+        </td>
+
+    </tr>
+</table>
+<table>
+    <th>Badanie: </th>
+    <tr>
+        <td>
+            ${patients.exam}
         </td>
     </tr>
 </table>

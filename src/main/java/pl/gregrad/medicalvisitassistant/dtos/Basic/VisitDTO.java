@@ -1,5 +1,6 @@
 package pl.gregrad.medicalvisitassistant.dtos.Basic;
 
+import com.sun.istack.internal.Nullable;
 import sun.util.resources.ga.LocaleNames_ga;
 
 import java.time.LocalDateTime;
@@ -11,6 +12,7 @@ public class VisitDTO {
     private LocalDateTime visitDate;
     private Integer charge;
     private String visitDescription;
+    @Nullable
     private Long patientId;
 
 

@@ -16,6 +16,7 @@
 <h2> Dodaj pacjenta</h2>
 <div>
     <form:form modelAttribute="patientForm" method="post">
+        <h3> Dane kontaktowe: </h3>
         Imię:<br/>
         <form:input path="name"/><br/>
         Nazwisko:<br/>
@@ -30,8 +31,27 @@
         <form:input path="phoneNumber"/><br/>
         E-mail:<br/>
         <form:input path="email"/><br/>
-        Badanie:<br/>
-        <form:textarea path="medicalExam"/><br/>
+        <br/>
+    <h3>Karta badania:</h3>
+        <br/>
+        Rozpoznanie: <br/>
+        <form:input path="diagnosis"/><br/>
+        Objawy: <br/>
+        <form:input path="symptoms"/><br/>
+        Choroby współistniejące: <br/>
+        <form:input path="diseases"/><br/>
+        Funkcjonowanie: <br/>
+        <form:input path="functioning"/><br/>
+        Dotychczasowa rehabilitacja: <br/>
+        <form:input path="rehab"/><br/>
+        Leki:<br/>
+        <form:input path="medicines"/><br/>
+        Zabiegi operacyjne, urazy: <br/>
+        <form:input path="procedures"/><br/>
+        Używki: <br/>
+        <form:input path="drugs"/><br/>
+        Badanie: <br/>
+        <form:textarea path="exam"/><br/>
         <input type="submit" value="Dodaj"/>
         <input type="reset" value="Wyczyść"/>
     </form:form>
