@@ -28,7 +28,7 @@
             <input type="submit" value="Zaloguj"/>
         </form>
 <h4>Nie masz konta? </h4>
-<p id="register"><a href="/registration"></a></p>
+<p id="register"><a href="/registration"><img src="images/zarejestruj się.png"></a></p>
 </div>
 </body>
 </html>

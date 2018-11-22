@@ -51,11 +51,6 @@ form input[type=password] {
     font-size: 17px;
 }
 #register {
-    background: url("../images/zarejestruj się.png") no-repeat center center;
-    height: 41px;
-    width: 395px;
-    border: none;
-    color: transparent;
     margin-bottom: 300px;
     margin-left: auto;
     margin-right: auto;
