@@ -10,7 +10,7 @@
 <html>
 <head>
     <title>Strona głowna</title>
-   <style><%@include file="/css/style.css"%></style>
+   <style><%@include file="/css/login.css"%></style>
 </head>
 <body>
 

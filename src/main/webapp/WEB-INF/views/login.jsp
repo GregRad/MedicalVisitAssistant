@@ -10,18 +10,25 @@
 <html>
 <head>
     <title>Login</title>
-    <style><%@include file="/css/form.css"%></style>
+    <link rel="stylesheet" href="/css/login.css">
 </head>
 <body>
-<h2>Podaj dane logowania</h2>
-    <div>
+<div>
+<p>ASYSTENT WIZYT</p>
+<p>MEDYCZNYCH</p>
+<br/>
+<br/>
         <form method="post" action="/login">
             <input type="text" name="login" placeholder="Login"/>
+            <br/>
+            <br/>
             <input type="password" name="password" placeholder="Password"/>
+            <br/>
+            <br/>
             <input type="submit" value="Zaloguj"/>
         </form>
-    </div>
-<h2>Zarejestruj się</h2>
-<p id="register"><a href="/registration"><img src="/images/5.png" alt="Lista wizyt" width="100px" height="100px" title="Zarejestruj się"/></a></p>
+<h4>Nie masz konta? </h4>
+<p id="register"><a href="/registration"></a></p>
+</div>
 </body>
 </html>
