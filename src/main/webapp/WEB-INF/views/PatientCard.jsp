@@ -110,5 +110,8 @@
         </tr>
     </th>
 </table>
+<div>
+    <a href="/patients/allPatients">cofnij</a>
+</div>
 </body>
 </html>

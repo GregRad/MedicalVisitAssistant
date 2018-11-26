@@ -67,5 +67,8 @@
     </form:form>
     </div>
 </div>
+<div>
+    <a href="/login">cofnij</a>
+</div>
 </body>
 </html>

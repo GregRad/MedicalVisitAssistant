@@ -27,5 +27,8 @@
         <input type="reset" id="clear" value="Wyczyść"/>
     </form:form>
 </div>
+<div>
+    <a href="/visit/allVisits">cofnij</a>
+</div>
 </body>
 </html>

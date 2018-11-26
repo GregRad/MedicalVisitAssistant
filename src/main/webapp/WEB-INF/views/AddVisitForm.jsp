@@ -28,6 +28,8 @@
         <input type="reset" id="clear" value="Wyczyść"/>
     </form:form>
 </div>
-
+<div>
+    <a href="/patients/allPatients">cofnij</a>
+</div>
 </body>
 </html>

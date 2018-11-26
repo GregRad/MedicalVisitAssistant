@@ -48,6 +48,10 @@
     </tr>
     </c:forEach>
 </table>
-
+<div>
+    <a href="/login">Strona głowna</a>
+    <a href="/patients/addPatient">Dodaj pacjenta</a>
+    <a href="/patients/allPatients">Lista pacjentów</a>
+</div>
 </body>
 </html>
