@@ -1,7 +1,5 @@
 package pl.gregrad.medicalvisitassistant.entity.Basic;
 
-import com.sun.istack.internal.Nullable;
-
 import javax.persistence.*;
 import java.time.LocalDateTime;
 
