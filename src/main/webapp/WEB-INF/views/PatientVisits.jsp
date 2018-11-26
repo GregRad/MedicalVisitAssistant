@@ -11,9 +11,10 @@
 <html>
 <head>
     <title>Wizyty</title>
-    <style><%@include file="/css/table.css"%></style>
+    <link rel="stylesheet" href="/css/table.css">
 </head>
 <body>
+<p>Wizyty</p>
 <table>
     <th>ID</th>
     <th>Data</th>

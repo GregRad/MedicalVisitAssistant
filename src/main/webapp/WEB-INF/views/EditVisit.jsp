@@ -10,20 +10,21 @@
 <html>
 <head>
     <title>Edytuj wizytę</title>
-    <style><%@include file="/css/form.css"%></style>
+    <link rel="stylesheet" href="/css/visit.css"/>
 </head>
 <body>
-<h2>Edytuj wizytę</h2>
+<p>Edytuj wizytę</p>
 <div>
     <form:form modelAttribute="editVisitForm" method="post"><br/>
-        Data:<br/>
-        <input type="datetime-local" id="visitDateRaw" name="visitDateRaw"/><br/>
-        Koszt:<br/>
-        <form:input path="charge"/><br/>
-        Opis:<br/>
-        <form:input path="visitDescription"/><br/>
+        <br/>
+        <input type="datetime-local" class="add" name="visitDateRaw" placeholder="Data"/><br/>
+        <br/>
+        <form:input path="charge" class="add" placeholder="Koszt"/><br/>
+        <br/>
+        <form:input path="visitDescription" class="add" placeholder="Opis"/><br/>
         <form:hidden path="patientId" /><br/>
-        <input type="submit" value="Zapisz"/>
+        <input type="submit" id="confirm" value="Dodaj"/> <br/>
+        <input type="reset" id="clear" value="Wyczyść"/>
     </form:form>
 </div>
 </body>

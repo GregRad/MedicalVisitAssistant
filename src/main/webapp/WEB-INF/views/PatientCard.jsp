@@ -11,13 +11,11 @@
 <html>
 <head>
     <title>Karta Pacjenta</title>
-    <style>
-        <%@include file="/css/table.css"%>
-    </style>
+    <link rel="stylesheet" href="/css/table.css">
 </head>
 <body>
-<h2>Karta Pacjenta</h2>
-<table align="center">
+<p>Karta Pacjenta</p>
+<table>
     <th>ID</th>
     <th>Imię</th>
     <th>Nazwisko</th>
@@ -52,7 +50,6 @@
             <td>
                     ${patients.email}
             </td>
-
         </tr>
 </table>
 <br/>
@@ -108,7 +105,6 @@
     </th>
         <tr>
             <td>
-                <%--<iframe src="/visit/patientVisit/${patients.id}"></iframe>--%>
                 <a href="/visit/patientVisit/${patients.id}">wyświetl</a>
             </td>
         </tr>

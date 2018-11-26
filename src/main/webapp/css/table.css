@@ -1,20 +1,38 @@
+@font-face {
+    font-family: 'acre-medium';
+    src: url("/fonts/acre-medium-webfont.woff2") format('woff2'),
+    url("/fonts/acre-medium-webfont.woff") format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
 body {
-
-    background: hsl(120, 40%, 60%);
-    padding-top: 150px;
-    font: normal 18px Sniglet; color: white;
+    background: url("../images/tło.png") no-repeat center center;
+    background-size: cover;
+    font-family: acre-medium;
     text-align: center;
+    color: white;
+}
+p {
+    margin-top: 100px;
+    font-size: 50px;
+    color: white;
+    line-height: 30%;
 }
 table {
-    background: white;
-    outline: none;
-    font: inherit;
     text-align: center;
-    color: hsl(120, 40%, 30%);
-    width: 100%;
-    padding: 0 10px;
+    margin-left: auto;
+    margin-right: auto;
 }
-th, td {
-    border-bottom: 1px solid #ddd;
+th {
+    background: #82BC76;
+    height: 41px;
+    width: 195px;
+    margin
 }
-h2 {font-weight: normal; font-size: 36px; margin-bottom: 75px;}
+td {
+    background-color: white;
+    color: #82BC76;
+    height: 41px;
+    width: 195px;
+
+}

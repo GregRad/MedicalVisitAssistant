@@ -10,12 +10,10 @@
 <html>
 <head>
     <title>Lista pacjentów</title>
-    <style>
-        <%@include file="/css/table.css"%>
-    </style>
+<link rel="stylesheet" href="/css/table.css">
 </head>
 <body>
-<h2>Lista pacjentów</h2>
+<p>Lista pacjentów</p>
 <table align="center">
     <th>ID</th>
     <th>Imię</th>

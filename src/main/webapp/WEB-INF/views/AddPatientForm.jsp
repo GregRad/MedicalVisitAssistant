@@ -10,51 +10,62 @@
 <html>
 <head>
     <title>Dodaj pacjenta</title>
-    <style><%@include file="/css/form.css"%></style>
+    <link rel="stylesheet" href="/css/newForm.css">
 </head>
 <body>
-<h2> Dodaj pacjenta</h2>
-<div>
+<p> Dodaj pacjenta</p>
+<div id="patient">
+    <div id="data">
+    <h4> Dane kontaktowe: </h4>
+        <br/>
     <form:form modelAttribute="patientForm" method="post">
-        <h3> Dane kontaktowe: </h3>
-        Imię:<br/>
-        <form:input path="name"/><br/>
-        Nazwisko:<br/>
-        <form:input path="surname"/><br/>
-        Ulica:<br/>
-        <form:input path="address"/><br/>
-        Numer domu:<br/>
-        <form:input path="houseNumber"/><br/>
-        Numer mieszkania:<br/>
-        <form:input path="apartmentNumber"/><br/>
-        Numer telefonu:<br/>
-        <form:input path="phoneNumber"/><br/>
-        E-mail:<br/>
-        <form:input path="email"/><br/>
+        <form:input class="add" path="name" placeholder="Imię"/><br/>
         <br/>
-    <h3>Karta badania:</h3>
+        <form:input class="add" path="surname" placeholder="Nazwisko"/><br/>
         <br/>
-        Rozpoznanie: <br/>
-        <form:input path="diagnosis"/><br/>
-        Objawy: <br/>
-        <form:input path="symptoms"/><br/>
-        Choroby współistniejące: <br/>
-        <form:input path="diseases"/><br/>
-        Funkcjonowanie: <br/>
-        <form:input path="functioning"/><br/>
-        Dotychczasowa rehabilitacja: <br/>
-        <form:input path="rehab"/><br/>
-        Leki:<br/>
-        <form:input path="medicines"/><br/>
-        Zabiegi operacyjne, urazy: <br/>
-        <form:input path="procedures"/><br/>
-        Używki: <br/>
-        <form:input path="drugs"/><br/>
-        Badanie: <br/>
-        <form:textarea path="exam"/><br/>
-        <input type="submit" value="Dodaj"/>
-        <input type="reset" value="Wyczyść"/>
+        <form:input class="add" path="address" placeholder="Ulica"/><br/>
+        <br/>
+        <form:input class="add" path="houseNumber" placeholder="Numer domu"/><br/>
+        <br/>
+        <form:input class="add" path="apartmentNumber" placeholder="Numer mieszkania"/><br/>
+        <br/>
+        <form:input class="add" path="phoneNumber" placeholder="Numer telefonu"/><br/>
+        <br/>
+        <form:input class="add" path="email" placeholder="E-mail"/><br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <input type="submit" id="confirm" value="Dodaj"/>
+        <br/>
+    </div>
+    <div id="card">
+    <h4>Karta badania:</h4>
+        <br/>
+        <form:input class="add" path="diagnosis" placeholder="Rozpoznanie"/><br/>
+        <br/>
+        <form:input class="add" path="symptoms" placeholder="Objawy"/><br/>
+        <br/>
+        <form:input class="add" path="diseases" placeholder="Choroby współistniejące"/><br/>
+        <br/>
+        <form:input class="add" path="functioning" placeholder="Funkcjonowanie"/><br/>
+        <br/>
+        <form:input class="add" path="rehab" placeholder="Dotychczasowa rehabilitacja"/><br/>
+        <br/>
+        <form:input class="add" path="medicines" placeholder="Leki"/><br/>
+        <br/>
+        <form:input class="add" path="procedures" placeholder="Zabiegi operacyjne, urazy"/><br/>
+        <br/>
+        <form:input class="add" path="drugs" placeholder="Używki"/><br/>
+        <br/>
+        <form:textarea class="add" path="exam" placeholder="Badanie"/><br/>
+        <br/>
+        <input type="reset" id="clear" value="Wyczyść"/>
     </form:form>
+    </div>
 </div>
 </body>
 </html>

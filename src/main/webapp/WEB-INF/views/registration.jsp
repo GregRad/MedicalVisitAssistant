@@ -3,29 +3,31 @@
 <html>
 <head>
     <title>Formularz rejestracyjny</title>
-    <style><%@include file="/css/form.css"%></style>
+    <link rel="stylesheet" href="/css/registerForm.css">
 </head>
 <body>
-<h2>Wypełnij formularz rejestracyjny</h2>
-    <div>
+<div>
+    <p>FORMULARZ</p>
+    <p>REJESTRACYJNY</p>
         <form:form modelAttribute="regForm" method="post">
-            Login:<br/>
-             <form:input path="login"/><br/>
-            <form:errors path="*" ></form:errors>
-            Email:<br/>
-             <form:input path="email"/><br/>
-            Hasło:<br/>
-             <form:password path="password"/><br/>
-            Potwierdź hasło:<br/>
-             <form:password path="confirmedPassword"/><br/>
-            Imię:<br/>
-             <form:input path="firstName"/><br/>
-            Nazwisko:<br/>
-             <form:input path="lastName"/><br/>
+            <br/>
+             <form:input class="register" path="login" placeholder="Login"/><br/>
+            <form:errors class="register" path="*" ></form:errors>
+            <br/>
+             <form:input class="register" path="email" placeholder="E-mail"/><br/>
+            <br/>
+             <form:password class="register" path="password" placeholder="Hasło"/><br/>
+            <br/>
+             <form:password class="register" path="confirmedPassword" placeholder="Potwierdź hasło"/><br/>
+            <br/>
+             <form:input class="register" path="firstName" placeholder="Imię"/><br/>
+            <br/>
+             <form:input class="register" path="lastName" placeholder="Nazwisko"/><br/>
+            <br/>
             <input type="submit" value="Zarejestruj"/>
+            <br/>
             <input type="reset" value="Wyczyść"/>
         </form:form>
-    </div>
-
+</div>
 </body>
 </html>
