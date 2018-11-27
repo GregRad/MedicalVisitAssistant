@@ -6,7 +6,7 @@
     font-style: normal;
 }
 body {
-    background: url("../images/tło.png") no-repeat center center;
+    background: url("../images/Background.png") no-repeat center center;
     background-size: cover;
     text-align: center;
     font-family: acre-medium;
@@ -21,7 +21,7 @@ p {
     line-height: 30%;
 }
 form input[type=submit] {
-    background : url("../images/zaloguj się.png") no-repeat center center;
+    background : url("../images/LogIn.png") no-repeat center center;
     height: 41px;
     width: 395px;
     border: none;

@@ -112,7 +112,7 @@
 </table>
 <br/>
 <div>
-    <a href="/patients/allPatients"><img src="/images/strzałka.png" alt="cofnij"></a>
+    <a href="/patients/allPatients"><img src="/images/Arrow.png" alt="cofnij"></a>
 </div>
 </body>
 </html>

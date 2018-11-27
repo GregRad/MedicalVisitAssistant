@@ -24,12 +24,12 @@
    </c:if>
     <div id="tile">
          <div class="row">
-             <div class="column"><a href="/patients/addPatient"><img src="/images/2.png" alt="Dodaj pacjenta" width="222px" height="222px" title="Dodaj pacjenta"/></a></div>
-             <div class="column"><a href="/patients/allPatients"><img src="/images/8.png" alt="Lista pacjentów" width="222px" height="222px" title="Lista pacjentów"/></a></div>
+             <div class="column"><a href="/patients/addPatient"><img src="/images/AddPatientMain.png" alt="Dodaj pacjenta" width="222px" height="222px" title="Dodaj pacjenta"/></a></div>
+             <div class="column"><a href="/patients/allPatients"><img src="/images/PatientListMain.png" alt="Lista pacjentów" width="222px" height="222px" title="Lista pacjentów"/></a></div>
          </div>
          <div class="row">
-             <div class="column"><a href="/visit/allVisits"><img src="/images/3.png" alt="Lista wizyt" width="222px" height="222px" title="Lista wizyt"/></a></div>
-             <div class="column"><a href=""><img src="/images/9.png" alt="Statystyki" width="222px" height="222px" title="Statystyki"/></a></div>
+             <div class="column"><a href="/visit/allVisits"><img src="/images/VisitListMain.png" alt="Lista wizyt" width="222px" height="222px" title="Lista wizyt"/></a></div>
+             <div class="column"><a href=""><img src="/images/StatsMain.png" alt="Statystyki" width="222px" height="222px" title="Statystyki"/></a></div>
          </div>
     </div>
 </div>

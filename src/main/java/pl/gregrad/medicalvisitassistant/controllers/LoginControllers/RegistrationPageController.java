@@ -23,18 +23,18 @@ public class RegistrationPageController {
     @GetMapping
     public String showRegistrationPage(Model model) {
         model.addAttribute("regForm", new RegistrationFormDTO());
-        return "registration";
+        return "RegistrationForm";
     }
 
     @PostMapping
     public String processRegistrationForm(@ModelAttribute("regForm") @Valid RegistrationFormDTO form,
                                           BindingResult results, Model model) {
         if (results.hasErrors()) {
-            return "registration";
+            return "RegistrationForm";
         }
         if (!form.getConfirmedPassword().equals(form.getPassword())) {
             results.rejectValue("password","errors.notmatch","Hasło i powtórzone hasło muszą być zgodne");
-            return "registration";
+            return "RegistrationForm";
         }
         try {
             registrationService.register(form);
@@ -42,11 +42,11 @@ public class RegistrationPageController {
         } catch (IllegalArgumentException iae) {
             iae.printStackTrace();
             results.rejectValue("login", "errors.nonunique", "Login/email są już zajęte");
-            return "registration";
+            return "RegistrationForm";
         } catch (RuntimeException re) {
             re.printStackTrace();
             model.addAttribute("error", true);
-            return "registration";
+            return "RegistrationForm";
         }
     }
 }

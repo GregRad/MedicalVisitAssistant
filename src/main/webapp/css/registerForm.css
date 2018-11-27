@@ -6,7 +6,7 @@
     font-style: normal;
 }
 body {
-    background: url("../images/tło1.png") no-repeat center center;
+    background: url("../images/BackgroundEdit.png") no-repeat center center;
     background-size: cover;
     text-align: center;
     font-family: acre-medium;
@@ -43,7 +43,7 @@ input[type="password"] {
     border-bottom: 2px solid white;
 }
 form input[type=submit] {
-    background : url("../images/zarejestruj się.png") no-repeat center center;
+    background : url("../images/Register.png") no-repeat center center;
     height: 41px;
     width: 395px;
     border: none;
@@ -53,7 +53,7 @@ form input[type=submit] {
     display: block;
 }
 form input[type=reset] {
-    background : url("../images/wyczyść.png") no-repeat center center;
+    background : url("../images/Clear.png") no-repeat center center;
     height: 41px;
     width: 395px;
     border: none;

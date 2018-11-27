@@ -23,7 +23,7 @@ public class LoginPageController {
         if (loggedUser != null) {
             return "redirect:/";
         }
-        return "login";
+        return "LoginPage";
     }
 
     @PostMapping
@@ -34,12 +34,12 @@ public class LoginPageController {
             return "redirect:/";
         }
         if (result.hasErrors()) {
-            return "login";
+            return "LoginPage";
         }
         boolean validCredentials = loginService.validate(form.getLogin(), form.getPassword());
         if (!validCredentials) {
             result.rejectValue("login", "errors.invalid", "Login i/lub hasło są niepoprawne");
-            return "login";
+            return "LoginPage";
         }
         TherapistDTO therapist = loginService.login(form.getLogin());
         session.setAttribute("loggedUser", therapist);

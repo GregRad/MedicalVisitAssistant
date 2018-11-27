@@ -69,7 +69,7 @@
 </div>
 <br/>
 <div>
-    <a href="/login"> <img src="/images/strzałka.png" alt="cofnij"></a>
+    <a href="/login"> <img src="/images/Arrow.png" alt="cofnij"></a>
 </div>
 </body>
 </html>
