@@ -67,8 +67,9 @@
     </form:form>
     </div>
 </div>
+<br/>
 <div>
-    <a href="/login">cofnij</a>
+    <a href="/login"> <img src="/images/strzałka.png" alt="cofnij"></a>
 </div>
 </body>
 </html>

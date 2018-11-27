@@ -27,8 +27,9 @@
         <input type="reset" id="clear" value="Wyczyść"/>
     </form:form>
 </div>
+<br/>
 <div>
-    <a href="/visit/allVisits">cofnij</a>
+    <a href="/visit/allVisits"> <img src="/images/strzałka.png" alt="cofnij"></a>
 </div>
 </body>
 </html>
