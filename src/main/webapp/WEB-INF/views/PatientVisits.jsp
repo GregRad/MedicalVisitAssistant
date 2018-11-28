@@ -14,6 +14,12 @@
     <link rel="stylesheet" href="/css/table.css">
 </head>
 <body>
+<div id="navigation">
+    <a href="/login"><img src="/images/navigationMainPage.png" title="Strona głowna"></a>
+    <a href="/patients/addPatient"><img src="/images/navigationAddPatient.png" title="Dodaj pacjenta"></a>
+    <a href="/patients/allPatients"><img src="/images/navigationPatientList.png" title="Lista pacjentów"></a>
+    <a href="/visit/allVisits"><img src="/images/navigationVisitList.png" title="Lista wizyt"></a>
+</div>
 <p>Wizyty</p>
 <table>
     <th>ID</th>
@@ -38,5 +44,8 @@
     </tr>
 </c:forEach>
 </table>
+<div id="back">
+<a href="/patients/allPatients"><img src="/images/Arrow.png" alt="cofnij"></a>
+</div>
 </body>
 </html>
