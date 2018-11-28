@@ -16,6 +16,8 @@ body {
 }
 #navigation {
     background-color: white;
+    height: 65px;
+    padding-top: 10px;
 }
 a {
     padding-right: 20px;
