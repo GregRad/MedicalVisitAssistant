@@ -14,6 +14,7 @@ import pl.gregrad.medicalvisitassistant.repositories.Therapist.TherapistRoleRepo
 
 @Service
 public class RegistrationService {
+
     @Autowired
     private TherapistLoginDataRepository therapistLoginDataRepository;
 

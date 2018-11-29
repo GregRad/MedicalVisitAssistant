@@ -24,6 +24,10 @@ public class VisitService {
 
     public void addVisit (VisitDTO visitForm) {
 
+        /*
+            Podobnie jak w PatientService - nie ma sensu wyciągać wartości z getterów
+            do pól, jak można użyć samych getterów.
+         */
         String patientDetails = visitForm.getPatientDetails();
         LocalDateTime visitDate = visitForm.getVisitDate();
         Integer charge = visitForm.getCharge();
@@ -55,6 +59,11 @@ public class VisitService {
         List<Visit> patientVisits = visitRepository.findByPatientId(id);
         return patientVisits;
     }
+
+    /*
+        Jest jedna metoda, która zwraca DTO zamiast encji! Super :D Gratulację! Teraz podążaj tą drogą :P
+
+     */
     public VisitDTO findById(Long id){
          Visit entity = visitRepository.findById(id);
          VisitDTO newVisitEdit = new VisitDTO();

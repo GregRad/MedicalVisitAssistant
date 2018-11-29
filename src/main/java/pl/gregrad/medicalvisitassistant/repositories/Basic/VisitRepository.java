@@ -5,7 +5,7 @@ import pl.gregrad.medicalvisitassistant.entity.Basic.Visit;
 
 import java.util.List;
 
-public interface VisitRepository extends JpaRepository <Visit, Long> {
+public interface VisitRepository extends JpaRepository<Visit, Long> {
 
     /*
         Podobnie jak w PatientRepository - findAll i findById do usunięcia :)
