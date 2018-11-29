@@ -11,9 +11,18 @@ import pl.gregrad.medicalvisitassistant.entity.Basic.Therapist.Therapist;
 @Repository
 public interface TherapistRepository extends JpaRepository<Therapist, Long> {
 
+    /*
+        Pamiętaj, że to zapytanie jest błędne i chyba je przerabialiśmy
+        na zajęciach na inne :)
+        Spójrz na zapytanie `checkCredentials` jak jest zrobione. Nie jest to MUST-HAVE, ale warto
+        przerobić aby było podobne do tamtego.
+     */
     @Query("SELECT true FROM Therapist t WHERE t.login = :login")
     Boolean isLoginUsed(@Param("login") String login);
 
+    /*
+        Uwaga jak wyżej :)
+     */
     @Query("SELECT true FROM Therapist t WHERE t.email = :email")
     Boolean isEmailUsed(@Param("email") String email);
 
