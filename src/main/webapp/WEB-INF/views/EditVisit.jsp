@@ -13,8 +13,14 @@
     <link rel="stylesheet" href="/css/visit.css"/>
 </head>
 <body>
+<div id="navigation">
+    <a href="/login"><img src="/images/navigationMainPage.png" title="Strona głowna"></a>
+    <a href="/patients/addPatient"><img src="/images/navigationAddPatient.png" title="Dodaj pacjenta"></a>
+    <a href="/patients/allPatients"><img src="/images/navigationPatientList.png" title="Lista pacjentów"></a>
+    <a href="/visit/allVisits"><img src="/images/navigationVisitList.png" title="Lista wizyt"></a>
+</div>
 <p>Edytuj wizytę</p>
-<div>
+<div id="form">
     <form:form modelAttribute="editVisitForm" method="post"><br/>
         <br/>
         <input type="datetime-local" class="add" name="visitDateRaw" placeholder="Data"/><br/>
@@ -28,7 +34,7 @@
     </form:form>
 </div>
 <br/>
-<div>
+<div id="back">
     <a href="/visit/allVisits"> <img src="/images/Arrow.png" alt="cofnij"></a>
 </div>
 </body>

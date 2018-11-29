@@ -20,7 +20,7 @@
 
          <p >Witaj, ${loggedUser.login}</p>
       </div>
-       <p id="logout"><a href="/logout"><img src="/images/wyloguj%20się.png"></a></p>
+       <p id="logout"><a href="/logout"><img src="/images/LogOut.png"></a></p>
    </c:if>
     <div id="tile">
          <div class="row">

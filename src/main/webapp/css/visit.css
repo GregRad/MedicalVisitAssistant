@@ -6,11 +6,21 @@
     font-style: normal;
 }
 body {
-    background: url("../images/Background.png") no-repeat center center;
+    background-image: url("../images/Background.png");
     background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     font-family: acre-medium;
-    color: white;
     text-align: center;
+    color: white;
+}
+#navigation {
+    background-color: white;
+    height: 65px;
+    padding-top: 10px;
+}
+a {
+    padding-right: 20px;
 }
 p {
     margin-top: 100px;
@@ -51,4 +61,8 @@ p {
 }
 ::placeholder {
     color: white;
+}
+#back {
+    margin-bottom: 50px;
+    margin-top: 50px;
 }
