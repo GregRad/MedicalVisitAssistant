@@ -3,6 +3,19 @@ package pl.gregrad.medicalvisitassistant.entity.Basic;
 
 import javax.persistence.*;
 
+/*
+    Rozbij tą klasę koniecznie na dwie osobne encje.
+    Zrób jedną encjęz danymi pacjenta. Możesz już z tego nawet nie wydzielać
+    danych adresowych i kontaktowych, tylko zostawić jak jest.
+    Natomiast koniecznie dorzuć klasę reprezentującą kartę pacjenta
+    z całym tym zestawem dodatkowych pól.
+
+    Zarówno na poziomie obiektowym, jak i na poziomie tabeli, klasa/tabela, która ma
+    tak dużo kolumn jest wielkim smrodem :)
+
+    Jak to rozbijesz, to nie będziesz też czuł się zniechęcony do dorzucenia adnotacji @Column,
+    aby nazwy kolumn na tabeli tworzyły się bez CamelCase tylko underscore_non_case ;)
+ */
 @Entity
 @Table(name = "Patient")
 public class Patient {
@@ -21,11 +34,23 @@ public class Patient {
     private String diagnosis;
     private String symptoms;
     private String diseases;
+    /*
+        Domyślnym typem, który Ci Hibernate stworzy będzie varchar(255) znaków.
+        Zastanów się czy te 255 znaków w każdym polu będzie wystarczające.
+        Jak nie to ustaw na poziomie @Column inną długość albo wskaż typ docelowy TEXT
+     */
     private String rehab;
     private String functioning;
     private String medicines;
     private String procedures;
     private String drugs;
+    /*
+        Na pewno tutaj jest złe mapowanie.
+        Powinniśmy mieć mapowanie @OneToMany ponieważ jeden pacjent
+        może mieć przecież wiele wizyt, a nie tylko pojedynczą.
+
+        Mogą z tego wyjść spore zmiany w aplikacji, ale tak to zostać niestety nie może :(
+     */
     @OneToOne(mappedBy = "patient", cascade = CascadeType.REMOVE)
     private Visit visit;
 
