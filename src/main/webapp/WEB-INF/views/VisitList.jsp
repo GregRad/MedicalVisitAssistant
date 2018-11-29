@@ -20,6 +20,8 @@
     <a href="/visit/allVisits"><img src="/images/navigationVisitList.png" title="Lista wizyt"></a>
 </div>
 <p>Lista wizyt</p>
+<%-- Hehehe :D <div id="table"> wygląda prawie jak <table> no ale do tagów <tr> czy <td> przydałoby się jednak
+prawdziwe <table> :P --%>
 <div id="table">
     <table>
     <th>ID</th>

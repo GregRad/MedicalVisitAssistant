@@ -19,6 +19,10 @@ public class PatientService {
 
     public void addPatient (PatientAddDTO patientForm) {
 
+        /*
+            Bardzo dużo niepotrzebnego kodu. Mamy te wszystkie dane w obiekcie PatientAddDTO,
+            więc nie musimy ich wyciągać do osobnych zmiennych.
+         */
         String name = patientForm.getName();
         String surname = patientForm.getSurname();
         String address = patientForm.getAddress();
@@ -58,6 +62,12 @@ public class PatientService {
 
     }
 
+    /*
+        Cały czas mieszają się encję z DTO - z takiego czegoś może wyjść tylko problem.
+        Musisz się zastanowić czy jesteś w stanie pociągnąć projekt w modelu DTO + Encję i jeżeli tak
+        to w warstwie kontrolera pamiętaj, że na encjach nie możesz pracować. Tym samym nie może ich zwracać ani przyjmować
+        serwis w żadnej ze swoich metod.
+     */
     public List<Patient> findAllPatients() { List<Patient> allPatients = patientRepository.findAll();return allPatients; }
 
     public Patient findById(Long id) {

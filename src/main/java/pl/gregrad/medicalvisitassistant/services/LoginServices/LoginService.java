@@ -9,6 +9,7 @@ import pl.gregrad.medicalvisitassistant.repositories.Therapist.TherapistReposito
 
 @Service
 public class LoginService {
+
     @Autowired
     private TherapistRepository therapistRepository;
 

@@ -14,10 +14,13 @@
 </head>
 <body>
 <div>
+    <%--Dla tytułów, to raczej stosuj tagi h1, h2 itd zamiast p. Zawsze możesz <br/> wstawić
+    jeżeli potrzebujesz rozbić to na linie --%>
 <p>ASYSTENT WIZYT</p>
 <p>MEDYCZNYCH</p>
 <br/>
 <br/>
+    <%--Brakuje obsługi błędów logowania, które może się nie udać --%>
         <form method="post" action="/login">
             <input type="text" name="login" placeholder="Login"/>
             <br/>

@@ -1,9 +1,10 @@
 package pl.gregrad.medicalvisitassistant.dtos.Basic;
 
-
-
 import java.time.LocalDateTime;
 
+/*
+    Jak w pozostałych - walidacja + podstawowe metody. NIE ZA-PO-MI-NAJ o nich :)
+ */
 public class VisitDTO {
 
     private Long id;

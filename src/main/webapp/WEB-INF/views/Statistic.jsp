@@ -20,6 +20,7 @@
     <a href="/visit/allVisits"><img src="/images/navigationVisitList.png" title="Lista wizyt"></a>
 </div>
     <table>
+        <%-- Widzę tutaj ambitny plan menedżera finansowego :D trzymam kciuki! --%>
         <th>Ilość wizyt</th>
         <th>Dochód</th>
         <tr>

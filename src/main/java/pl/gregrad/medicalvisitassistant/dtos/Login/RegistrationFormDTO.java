@@ -6,6 +6,9 @@ import org.hibernate.validator.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
+/*
+    Uwagi jak do klasy LoginFormDTO - wiadomości walidacyjne + equals, hashCode i toString()
+ */
 public class RegistrationFormDTO {
 
     @NotNull @NotBlank @Size(min = 5, max = 20)

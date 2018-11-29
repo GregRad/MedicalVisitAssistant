@@ -15,6 +15,10 @@ public class HomePageController {
         if(loggedUser == null) {
             return "redirect:/login";
         }
+        /*
+            W nazwach plików/ścieżek raczej unika CamelCase. Stosuj dolne podkreślenia albo myślniki na zasadzie `home-page`
+            albo `home_page`.
+         */
         return "HomePage";
     }
 }

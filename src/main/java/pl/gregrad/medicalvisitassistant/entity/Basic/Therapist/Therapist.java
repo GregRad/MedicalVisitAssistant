@@ -4,6 +4,10 @@ import pl.gregrad.medicalvisitassistant.entity.Abstract.AbstractEntity;
 
 import javax.persistence.*;
 
+/*
+    Jeszcze uwaga co do pakietów, bo nie miałem gdzie jej dać :)
+    Zrób refactor aby nazwy pakietów nie były CamelCase tylko normalnie, tak jak się pakiety nazywa: tylko małe litery.
+ */
 @Entity
 @Table(name = "Therapist")
 public class Therapist extends AbstractEntity {
