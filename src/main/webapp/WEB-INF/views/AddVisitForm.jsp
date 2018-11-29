@@ -24,7 +24,10 @@
 <div id="form">
     <form:form modelAttribute="visitForm" method="post" action="/visit/addVisit">
         <br/>
-        <input type="datetime-local" class="add" name="visitDateRaw" placeholder="Data"/><br/>
+        <%-- U mnie przeglądarka akurat tego typu pola nie obsługuje, więc upewnij się, że to jest
+        przenośne. Dodałem Ci też required, bo bez tego to lecą Ci błędy w kontrolerze :) --%>
+        <input type="datetime-local" class="add" name="visitDateRaw" placeholder="Data"
+        required/><br/>
         <br/>
          <form:input path="charge" class="add" placeholder="Koszt"/><br/>
         <br/>
