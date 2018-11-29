@@ -6,11 +6,16 @@
     font-style: normal;
 }
 body {
-    background: url("../images/BackgroundEdit.png") no-repeat center center;
+    background-image: url("../images/BackgroundEdit.png");
     background-size: cover;
-    text-align: center;
+    background-position: center;
+    background-repeat: no-repeat;
     font-family: acre-medium;
+    text-align: center;
     color: white;
+}
+a {
+    padding-right: 20px;
 }
 div {
     display: block;
@@ -64,4 +69,8 @@ form input[type=reset] {
 }
 ::placeholder {
     color: white;
+}
+#back {
+    margin-bottom: 50px;
+    margin-top: 50px;
 }

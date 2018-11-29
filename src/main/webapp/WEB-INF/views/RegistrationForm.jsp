@@ -29,5 +29,8 @@
             <input type="reset" value="Wyczyść"/>
         </form:form>
 </div>
+<div id="back">
+    <a href="/login"> <img src="/images/Arrow.png" alt="cofnij"></a>
+</div>
 </body>
 </html>

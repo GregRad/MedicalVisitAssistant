@@ -6,10 +6,13 @@
     font-style: normal;
 }
 body {
-    background: url("../images/Background.png") no-repeat center center;
+    background-image: url("../images/Background.png");
     background-size: cover;
-    text-align: center;
+    background-position: center;
+    background-repeat: no-repeat;
     font-family: acre-medium;
+    text-align: center;
+    color: white;
 }
 p {
     color: white;
