@@ -38,6 +38,9 @@ public class TherapistDTO {
         return Objects.hash(id, login);
     }
 
+    /*
+        Zmień tą implementację, bo Ci `UserDTO` zostało z kopiowania :D :D :D
+     */
     @Override
     public String toString() {
         return "UserDTO{" +

@@ -1,5 +1,13 @@
 package pl.gregrad.medicalvisitassistant.dtos.Basic;
 
+/*
+    Zmień nazwę klasy na `AddPatientFormDTO`, bo to DTO odpowiada konkretnemu formularzowi
+    dodawania pacjenta i taka nazwa będzie lepsza.
+
+    Dorzuć walidację do tego (niestety sporo tego będzie, ale cóż... )
+    W tym momencie można dodać pacjenta z samym imieniem, a takie coś nie powinno przechodzić.
+    Zastanów się też czy nie chcesz tej karty pacjenta dodawać osobno :)
+ */
 public class PatientAddDTO {
 
     private Long id;
