@@ -1,3 +1,13 @@
+/* Masz dużo powtórzeń na poziomie plików css :)
+    Szacun za poziom i że się w ogóle pojawiły, ale zastanów się nad przerobieniem
+    tego pod jeden główny plik css, a tam gdzie na rożnych stronach inaczej chcesz formatować
+    te same tagi html wprowadź klasy css i reguły oprzyj na klasach.
+
+    Raczej nigdy się nie robi osobnych css'ów pod konkretne strony, a same pliki css potrafią mieć
+    wiele tysięcy linii kodu :) spójrz sobie przykładowo na plik css dla bootstrapa.
+*/
+
+
 @font-face {
     font-family: 'acre-medium';
     src: url("/fonts/acre-medium-webfont.woff2") format('woff2'),
