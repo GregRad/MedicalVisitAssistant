@@ -30,15 +30,12 @@ public class VisitController {
         return "AddVisitForm";
     }
 
-
-
     @GetMapping("/patientVisit/{patientId:[0-9]+}")
     public String showPatientVisits (@PathVariable Long patientId, Model model) {
         List<Visit> visits = visitService.findByPatientId(patientId);
         model.addAttribute("patientVisits", visits);
         return "PatientVisits";
     }
-
 
     @PostMapping("/addVisit")
     public String addVisit (@ModelAttribute VisitDTO form, @RequestParam String visitDateRaw) {
@@ -64,6 +61,10 @@ public class VisitController {
         visitService.edit(visit);
         return "redirect:/visit/allVisits";
     }
+
+    /*
+        To co w PatientAddController - podwójne sprawdzenie przed usunięciem
+     */
     @GetMapping("/delete/{id}")
     public String deleteVisit (@PathVariable Long id) {
         visitService.delete(id);
