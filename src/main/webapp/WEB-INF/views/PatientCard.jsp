@@ -21,6 +21,8 @@
     <a href="/visit/allVisits"><img src="/images/navigationVisitList.png" title="Lista wizyt"></a>
 </div>
 <p>Karta Pacjenta</p>
+<%--Tagi th są odmianą tagów td, a więc powinny być zawsze w tagu tr oznaczającym wiersz. Do szybkiej poprawy ;)
+    Albo trochę wolniejszej, bo nie tylko tutaj ale wszędzie gdzie z tego korzystasz --%>
 <table>
     <th>ID</th>
     <th>Imię</th>
