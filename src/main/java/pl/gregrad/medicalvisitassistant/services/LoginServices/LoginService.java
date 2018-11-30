@@ -3,7 +3,7 @@ package pl.gregrad.medicalvisitassistant.services.LoginServices;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import pl.gregrad.medicalvisitassistant.dtos.Basic.TherapistDTO;
-import pl.gregrad.medicalvisitassistant.entity.Basic.Therapist.Therapist;
+import pl.gregrad.medicalvisitassistant.entity.Therapist.Therapist;
 import pl.gregrad.medicalvisitassistant.repositories.Therapist.TherapistLoginDataRepository;
 import pl.gregrad.medicalvisitassistant.repositories.Therapist.TherapistRepository;
 

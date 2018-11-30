@@ -1,16 +1,16 @@
-package pl.gregrad.medicalvisitassistant.entity.Basic.Therapist;
+package pl.gregrad.medicalvisitassistant.entity.Therapist;
 
 import javax.persistence.*;
 
 @Entity
-@Table(name = "Therapist_roles")
-public class TherapistRole {
+@Table(name = "Therapist_login_data")
+public class TherapistLogInData {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String role;
-    @ManyToOne(optional = false)
+    private String password;
+    @OneToOne
     private Therapist therapist;
 
     public Long getId() {
@@ -21,12 +21,12 @@ public class TherapistRole {
         this.id = id;
     }
 
-    public String getRole() {
-        return role;
+    public String getPassword() {
+        return password;
     }
 
-    public void setRole(String role) {
-        this.role = role;
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     public Therapist getTherapist() {

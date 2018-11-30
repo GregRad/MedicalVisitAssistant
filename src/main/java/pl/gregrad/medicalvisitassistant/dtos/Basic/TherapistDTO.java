@@ -40,7 +40,7 @@ public class TherapistDTO {
 
     @Override
     public String toString() {
-        return "UserDTO{" +
+        return "TherapistDTO{" +
                 "id=" + id +
                 ", login='" + login + '\'' +
                 '}';

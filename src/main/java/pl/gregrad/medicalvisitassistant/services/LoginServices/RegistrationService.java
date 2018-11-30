@@ -3,14 +3,12 @@ package pl.gregrad.medicalvisitassistant.services.LoginServices;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import pl.gregrad.medicalvisitassistant.dtos.Login.RegistrationFormDTO;
-import pl.gregrad.medicalvisitassistant.entity.Basic.Therapist.Therapist;
-import pl.gregrad.medicalvisitassistant.entity.Basic.Therapist.TherapistDetails;
-import pl.gregrad.medicalvisitassistant.entity.Basic.Therapist.TherapistLogInData;
-import pl.gregrad.medicalvisitassistant.entity.Basic.Therapist.TherapistRole;
+import pl.gregrad.medicalvisitassistant.entity.Therapist.Therapist;
+import pl.gregrad.medicalvisitassistant.entity.Therapist.TherapistDetails;
+import pl.gregrad.medicalvisitassistant.entity.Therapist.TherapistLogInData;
 import pl.gregrad.medicalvisitassistant.repositories.Therapist.TherapistDetailsRepository;
 import pl.gregrad.medicalvisitassistant.repositories.Therapist.TherapistLoginDataRepository;
 import pl.gregrad.medicalvisitassistant.repositories.Therapist.TherapistRepository;
-import pl.gregrad.medicalvisitassistant.repositories.Therapist.TherapistRoleRepository;
 
 @Service
 public class RegistrationService {
@@ -22,9 +20,6 @@ public class RegistrationService {
 
     @Autowired
     private TherapistDetailsRepository therapistDetailsRepository;
-
-    @Autowired
-    private TherapistRoleRepository therapistRoleRepository;
 
     public void register(RegistrationFormDTO form) {
         String login = form.getLogin();
@@ -55,9 +50,5 @@ public class RegistrationService {
         loginData.setPassword(password);
         therapistLoginDataRepository.save(loginData);
 
-        TherapistRole role = new TherapistRole();
-        role.setTherapist(therapist);
-        role.setRole("USER");
-        therapistRoleRepository.save(role);
     }
 }
