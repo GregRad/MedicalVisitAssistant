@@ -1,4 +1,4 @@
-package pl.gregrad.medicalvisitassistant.services.LoginServices;
+package pl.gregrad.medicalvisitassistant.services.Login_Service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

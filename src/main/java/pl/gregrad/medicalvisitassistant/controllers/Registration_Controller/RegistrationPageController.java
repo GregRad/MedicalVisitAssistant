@@ -1,4 +1,4 @@
-package pl.gregrad.medicalvisitassistant.controllers.Login_Controllers;
+package pl.gregrad.medicalvisitassistant.controllers.Registration_Controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -8,8 +8,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import pl.gregrad.medicalvisitassistant.dtos.Login.RegistrationFormDTO;
-import pl.gregrad.medicalvisitassistant.services.LoginServices.RegistrationService;
+import pl.gregrad.medicalvisitassistant.dtos.Registration.RegistrationFormDTO;
+import pl.gregrad.medicalvisitassistant.services.Registration_Service.RegistrationService;
 
 import javax.validation.Valid;
 

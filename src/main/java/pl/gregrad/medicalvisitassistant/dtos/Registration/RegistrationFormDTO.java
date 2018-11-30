@@ -1,4 +1,4 @@
-package pl.gregrad.medicalvisitassistant.dtos.Login;
+package pl.gregrad.medicalvisitassistant.dtos.Registration;
 
 import org.hibernate.validator.constraints.Email;
 import org.hibernate.validator.constraints.NotBlank;
