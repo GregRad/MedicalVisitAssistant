@@ -1,4 +1,4 @@
-package pl.gregrad.medicalvisitassistant.controllers.LoginControllers;
+package pl.gregrad.medicalvisitassistant.controllers.Login_Controllers;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;

@@ -1,4 +1,4 @@
-package pl.gregrad.medicalvisitassistant.controllers.LoginControllers;
+package pl.gregrad.medicalvisitassistant.controllers.Login_Controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -23,18 +23,18 @@ public class RegistrationPageController {
     @GetMapping
     public String showRegistrationPage(Model model) {
         model.addAttribute("regForm", new RegistrationFormDTO());
-        return "RegistrationForm";
+        return "Registration_Form";
     }
 
     @PostMapping
     public String processRegistrationForm(@ModelAttribute("regForm") @Valid RegistrationFormDTO form,
                                           BindingResult results, Model model) {
         if (results.hasErrors()) {
-            return "RegistrationForm";
+            return "Registration_Form";
         }
         if (!form.getConfirmedPassword().equals(form.getPassword())) {
             results.rejectValue("password","errors.notmatch","Hasło i powtórzone hasło muszą być zgodne");
-            return "RegistrationForm";
+            return "Registration_Form";
         }
         try {
             registrationService.register(form);
@@ -42,11 +42,11 @@ public class RegistrationPageController {
         } catch (IllegalArgumentException iae) {
             iae.printStackTrace();
             results.rejectValue("login", "errors.nonunique", "Login/email są już zajęte");
-            return "RegistrationForm";
+            return "Registration_Form";
         } catch (RuntimeException re) {
             re.printStackTrace();
             model.addAttribute("error", true);
-            return "RegistrationForm";
+            return "Registration_Form";
         }
     }
 }

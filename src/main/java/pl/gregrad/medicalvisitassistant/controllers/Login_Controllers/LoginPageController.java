@@ -1,4 +1,4 @@
-package pl.gregrad.medicalvisitassistant.controllers.LoginControllers;
+package pl.gregrad.medicalvisitassistant.controllers.Login_Controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -23,7 +23,7 @@ public class LoginPageController {
         if (loggedUser != null) {
             return "redirect:/";
         }
-        return "LoginPage";
+        return "Login_Page";
     }
 
     @PostMapping
@@ -34,16 +34,16 @@ public class LoginPageController {
             return "redirect:/";
         }
         if (result.hasErrors()) {
-            return "LoginPage";
+            return "Login_Page";
         }
         boolean validCredentials = loginService.validate(form.getLogin(), form.getPassword());
         if (!validCredentials) {
             result.rejectValue("login", "errors.invalid", "Login i/lub hasło są niepoprawne");
-            return "LoginPage";
+            return "Login_Page";
         }
         TherapistDTO therapist = loginService.login(form.getLogin());
         session.setAttribute("loggedUser", therapist);
-        return "HomePage";
+        return "Home_Page";
     }
 }
 

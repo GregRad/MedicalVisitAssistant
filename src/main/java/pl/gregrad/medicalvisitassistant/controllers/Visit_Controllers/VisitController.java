@@ -1,4 +1,4 @@
-package pl.gregrad.medicalvisitassistant.controllers.VisitControllers;
+package pl.gregrad.medicalvisitassistant.controllers.Visit_Controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -27,36 +27,33 @@ public class VisitController {
         VisitDTO newVisit = new VisitDTO();
         newVisit.setPatientId(patientId);
         model.addAttribute("visitForm", newVisit);
-        return "AddVisitForm";
+        return "Add_Visit_Form";
     }
-
-
 
     @GetMapping("/patientVisit/{patientId:[0-9]+}")
     public String showPatientVisits (@PathVariable Long patientId, Model model) {
         List<Visit> visits = visitService.findByPatientId(patientId);
         model.addAttribute("patientVisits", visits);
-        return "PatientVisits";
+        return "Patient_Visits";
     }
-
 
     @PostMapping("/addVisit")
     public String addVisit (@ModelAttribute VisitDTO form, @RequestParam String visitDateRaw) {
         form.setVisitDate(LocalDateTime.parse(visitDateRaw));
         visitService.addVisit(form);
-        return "HomePage";
+        return "Home_Page";
     }
     @GetMapping("/allVisits")
     public String showAllVisit (Model model) {
         List<Visit> allVisits = visitService.findAllVisit();
         model.addAttribute("visits", allVisits);
-        return "VisitList";
+        return "Visit_List";
     }
     @GetMapping("/edit/{id}")
     public String visitToEdit (@PathVariable Long id, Model model) {
         VisitDTO editVisit = visitService.findById(id);
         model.addAttribute("editVisitForm", editVisit);
-        return "EditVisit";
+        return "Edit_Visit";
     }
     @PostMapping("/edit/{id}")
     public String editVisit (@ModelAttribute("editVisitForm") VisitDTO visit, @RequestParam(required = false) String visitDateRaw) {

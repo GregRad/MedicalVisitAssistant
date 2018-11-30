@@ -1,4 +1,4 @@
-package pl.gregrad.medicalvisitassistant.controllers.PatientControllers;
+package pl.gregrad.medicalvisitassistant.controllers.Patient_Controllers;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,7 +13,7 @@ import java.util.List;
 
 @Controller
 @RequestMapping("/patients")
-public class PatientAddController {
+public class PatientController {
 
     @Autowired
     private PatientService patientService;
@@ -21,29 +21,29 @@ public class PatientAddController {
     @GetMapping("/addPatient")
     public String showAddPatientForm (Model model) {
         model.addAttribute("patientForm", new PatientAddDTO());
-        return "AddPatientForm";
+        return "Add_Patient_Form";
     }
     @PostMapping("/addPatient")
     public String addPatient(@ModelAttribute PatientAddDTO form) {
         patientService.addPatient(form);
-        return "HomePage";
+        return "Home_Page";
     }
     @GetMapping("/allPatients")
     public String showPatients(Model model) {
         List<Patient> allPatients = patientService.findAllPatients();
         model.addAttribute("patients", allPatients );
-        return "PatientList";
+        return "Patien_tList";
     }
     @GetMapping("/card/{id}")
     public String showPatientsCard(@PathVariable Long id, Model model) {
         Patient patient = patientService.findById(id);
         model.addAttribute("patients", patient);
-        return "PatientCard";
+        return "Patient_Card";
     }
     @GetMapping("/edit/{id}")
     public String patientToEdit(@PathVariable Long id, Model model) {
         model.addAttribute("editForm", patientService.findById(id));
-        return "EditPatient";
+        return "Edit_Patient";
     }
     @PostMapping("/edit/{id}")
     public String editPatient(@ModelAttribute Patient patient){
