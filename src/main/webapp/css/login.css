@@ -24,7 +24,7 @@ p {
     line-height: 30%;
 }
 form input[type=submit] {
-    background : url("../images/LogIn.png") no-repeat center center;
+    background : url("../images/Log_In.png") no-repeat center center;
     height: 41px;
     width: 395px;
     border: none;

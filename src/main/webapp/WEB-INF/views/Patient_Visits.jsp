@@ -15,10 +15,10 @@
 </head>
 <body>
 <div id="navigation">
-    <a href="/login"><img src="/images/navigationMainPage.png" title="Strona głowna"></a>
-    <a href="/patients/addPatient"><img src="/images/navigationAddPatient.png" title="Dodaj pacjenta"></a>
-    <a href="/patients/allPatients"><img src="/images/navigationPatientList.png" title="Lista pacjentów"></a>
-    <a href="/visit/allVisits"><img src="/images/navigationVisitList.png" title="Lista wizyt"></a>
+    <a href="/login"><img src="/images/navigation_Main_Page.png" title="Strona głowna"></a>
+    <a href="/patients/addPatient"><img src="/images/navigation_Add_Patient.png" title="Dodaj pacjenta"></a>
+    <a href="/patients/allPatients"><img src="/images/navigation_Patient_List.png" title="Lista pacjentów"></a>
+    <a href="/visit/allVisits"><img src="/images/navigation_Visit_List.png" title="Lista wizyt"></a>
 </div>
 <p>Wizyty</p>
 <table>
