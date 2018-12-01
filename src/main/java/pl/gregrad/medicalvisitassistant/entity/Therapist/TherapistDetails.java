@@ -15,6 +15,7 @@ public class TherapistDetails {
     private String lastName;
     @OneToOne(optional = false, fetch = FetchType.EAGER)
     private Therapist therapist;
+
     public Long getId() {
         return id;
     }

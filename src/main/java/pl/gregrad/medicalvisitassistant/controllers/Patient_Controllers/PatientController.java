@@ -5,7 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
-import pl.gregrad.medicalvisitassistant.dtos.Basic.PatientAddDTO;
+import pl.gregrad.medicalvisitassistant.dtos.Basic.PatientDTO;
 import pl.gregrad.medicalvisitassistant.entity.Basic.Patient;
 import pl.gregrad.medicalvisitassistant.services.Basic.PatientService;
 
@@ -20,11 +20,11 @@ public class PatientController {
 
     @GetMapping("/addPatient")
     public String showAddPatientForm (Model model) {
-        model.addAttribute("patientForm", new PatientAddDTO());
+        model.addAttribute("patientForm", new PatientDTO());
         return "Add_Patient_Form";
     }
     @PostMapping("/addPatient")
-    public String addPatient(@ModelAttribute PatientAddDTO form) {
+    public String addPatient(@ModelAttribute PatientDTO form) {
         patientService.addPatient(form);
         return "Home_Page";
     }

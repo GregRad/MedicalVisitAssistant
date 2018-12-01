@@ -1,6 +1,6 @@
 package pl.gregrad.medicalvisitassistant.dtos.Basic;
 
-public class PatientAddDTO {
+public class PatientDTO {
 
     private Long id;
     private String name;
