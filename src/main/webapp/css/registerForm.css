@@ -1,0 +1,76 @@
+@font-face {
+    font-family: 'acre-medium';
+    src: url("/fonts/acre-medium-webfont.woff2") format('woff2'),
+    url("/fonts/acre-medium-webfont.woff") format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+body {
+    background-image: url("../images/Background_Edit.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: acre-medium;
+    text-align: center;
+    color: white;
+}
+a {
+    padding-right: 20px;
+}
+div {
+    display: block;
+    text-align: center;
+    margin-top: 150px;
+}
+p {
+    font-size: 70px;
+    color: white;
+    line-height: 30%;
+}
+input[type="password"] {
+    background: transparent;
+    color: white;
+    height: 41px;
+    width: 395px;
+    font-size: 17px;
+    border: 0;
+    outline: 0;
+    border-bottom: 2px solid white;
+}
+.register {
+    background: transparent;
+    color: white;
+    height: 41px;
+    width: 395px;
+    font-size: 17px;
+    border: 0;
+    outline: 0;
+    border-bottom: 2px solid white;
+}
+form input[type=submit] {
+    background : url("../images/Register.png") no-repeat center center;
+    height: 41px;
+    width: 395px;
+    border: none;
+    color: transparent;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+form input[type=reset] {
+    background : url("../images/Clear.png") no-repeat center center;
+    height: 41px;
+    width: 395px;
+    border: none;
+    color: transparent;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+::placeholder {
+    color: white;
+}
+#back {
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
