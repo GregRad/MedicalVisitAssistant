@@ -28,6 +28,17 @@ public class VisitService {
         }
         return allVisits;
     }
+
+    public VisitDTO findById (Long id) {
+        Visit visitById = visitRepository.findOne(id);
+        VisitDTO patientVisit = new VisitDTO();
+        patientVisit.setVisitDate(visitById.getVisitDate());
+        patientVisit.setCharge(visitById.getCharge());
+        patientVisit.setVisitDescription(visitById.getVisitDescription());
+
+        return patientVisit;
+    }
+
     public List<VisitDTO> findByPatientId (Long id){
         List<Visit> patientVisits = visitRepository.findByPatientId(id);
         List<VisitDTO> visitByPatient = new ArrayList<>();
@@ -40,9 +51,11 @@ public class VisitService {
         }
         return visitByPatient;
     }
+
     public void delete (Long id) {
         visitRepository.delete(visitRepository.findOne(id));
     }
+
     public void edit (VisitDTO visit) {
         Visit editVisit = visitRepository.findOne(visit.getId());
         editVisit.setVisitDescription(visit.getVisitDescription());

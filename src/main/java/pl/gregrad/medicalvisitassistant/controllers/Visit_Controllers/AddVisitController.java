@@ -6,16 +6,14 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import pl.gregrad.medicalvisitassistant.dtos.Basic.VisitDTO;
-import pl.gregrad.medicalvisitassistant.services.Basic.VisitService;
-
-import java.time.LocalDateTime;
+import pl.gregrad.medicalvisitassistant.services.Basic.AddVisitService;
 
 @Controller
 @RequestMapping("/visit")
 public class AddVisitController {
 
     @Autowired
-    private VisitService visitService;
+    private AddVisitService addVisitService;
 
     @GetMapping("/addVisit/{patientId:[0-9]+}")
     public String showAddVisitForm (@PathVariable Long patientId, Model model) {
@@ -25,9 +23,8 @@ public class AddVisitController {
         return "Add_Visit_Form";
     }
     @PostMapping("/addVisit")
-    public String addVisit (@ModelAttribute VisitDTO form, @RequestParam String visitDateRaw) {
-        form.setVisitDate(LocalDateTime.parse(visitDateRaw));
-        visitService.addVisit(form);
+    public String addVisit (@ModelAttribute VisitDTO form) {
+        addVisitService.addVisit(form);
         return "Visit_List";
     }
 }

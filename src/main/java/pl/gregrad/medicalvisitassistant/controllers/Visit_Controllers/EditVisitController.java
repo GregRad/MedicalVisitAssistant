@@ -8,7 +8,6 @@ import org.springframework.web.bind.annotation.*;
 import pl.gregrad.medicalvisitassistant.dtos.Basic.VisitDTO;
 import pl.gregrad.medicalvisitassistant.services.Basic.VisitService;
 
-import java.time.LocalDateTime;
 
 @Controller
 @RequestMapping("/visit")
@@ -24,8 +23,7 @@ public class EditVisitController {
         return "Edit_Visit";
     }
     @PostMapping("/edit/{id}")
-    public String editVisit (@ModelAttribute("editVisitForm") VisitDTO visit, @RequestParam(required = false) String visitDateRaw) {
-        visit.setVisitDate(LocalDateTime.parse(visitDateRaw));
+    public String editVisit (@ModelAttribute("editVisitForm") VisitDTO visit) {
         visitService.edit(visit);
         return "redirect:/visit/allVisits";
     }
