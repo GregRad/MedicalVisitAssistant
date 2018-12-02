@@ -1,5 +1,10 @@
 package pl.gregrad.medicalvisitassistant.entity.Basic;
 
+<<<<<<< HEAD
+=======
+import org.hibernate.mapping.ToOne;
+
+>>>>>>> 718229d91fa0c7189b116e7f54391e50fcd53bfb
 import javax.persistence.*;
 import java.time.LocalDateTime;
 
@@ -14,8 +19,13 @@ public class Visit {
     private LocalDateTime visitDate;
     private Integer charge;
     private String visitDescription;
+<<<<<<< HEAD
     @OneToOne
     private Patient patient;
+=======
+    @ManyToOne
+    private PatientDetails patient;
+>>>>>>> 718229d91fa0c7189b116e7f54391e50fcd53bfb
 
     public Long getId() {
         return id;
@@ -57,11 +67,19 @@ public class Visit {
         this.patientDetails = paatientDetails;
     }
 
+<<<<<<< HEAD
     public Patient getPatient() {
         return patient;
     }
 
     public void setPatient(Patient patient) {
+=======
+    public PatientDetails getPatient() {
+        return patient;
+    }
+
+    public void setPatient(PatientDetails patient) {
+>>>>>>> 718229d91fa0c7189b116e7f54391e50fcd53bfb
         this.patient = patient;
     }
 }

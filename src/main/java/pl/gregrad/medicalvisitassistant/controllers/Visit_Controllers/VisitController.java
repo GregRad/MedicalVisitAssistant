@@ -29,14 +29,12 @@ public class VisitController {
         model.addAttribute("visitForm", newVisit);
         return "Add_Visit_Form";
     }
-
     @GetMapping("/patientVisit/{patientId:[0-9]+}")
     public String showPatientVisits (@PathVariable Long patientId, Model model) {
         List<Visit> visits = visitService.findByPatientId(patientId);
         model.addAttribute("patientVisits", visits);
         return "Patient_Visits";
     }
-
     @PostMapping("/addVisit")
     public String addVisit (@ModelAttribute VisitDTO form, @RequestParam String visitDateRaw) {
         form.setVisitDate(LocalDateTime.parse(visitDateRaw));

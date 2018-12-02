@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import pl.gregrad.medicalvisitassistant.dtos.Basic.VisitDTO;
 import pl.gregrad.medicalvisitassistant.entity.Basic.Patient;
+import pl.gregrad.medicalvisitassistant.entity.Basic.PatientDetails;
 import pl.gregrad.medicalvisitassistant.entity.Basic.Visit;
 import pl.gregrad.medicalvisitassistant.repositories.Basic.PatientRepository;
 import pl.gregrad.medicalvisitassistant.repositories.Basic.VisitRepository;
@@ -35,7 +36,9 @@ public class VisitService {
         newVisit.setCharge(charge);
         newVisit.setVisitDescription(visitDescription);
 
+
         Patient patient = patientRepository.findById(visitForm.getPatientId());
+        PatientDetails patient = patientRepository.findOne(visitForm.getPatientId());
         newVisit.setPatient(patient);
 
         visitRepository.save(newVisit);
@@ -57,6 +60,7 @@ public class VisitService {
     }
     public VisitDTO findById(Long id){
          Visit entity = visitRepository.findById(id);
+         Visit entity = visitRepository.findOne(id);
          VisitDTO newVisitEdit = new VisitDTO();
          newVisitEdit.setId(entity.getId());
          newVisitEdit.setVisitDate(entity.getVisitDate());
@@ -71,6 +75,11 @@ public class VisitService {
 
     public void edit (VisitDTO visit) {
         Visit entit = visitRepository.findById(visit.getId());
+        visitRepository.delete(visitRepository.findOne(id));
+    }
+
+    public void edit (VisitDTO visit) {
+        Visit entit = visitRepository.findOne(visit.getId());
         entit.setVisitDescription(visit.getVisitDescription());
         entit.setCharge(visit.getCharge());
         entit.setVisitDate(visit.getVisitDate());

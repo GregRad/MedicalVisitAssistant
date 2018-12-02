@@ -1,4 +1,4 @@
-package pl.gregrad.medicalvisitassistant.dtos.Basic;
+package pl.gregrad.medicalvisitassistant.dtos.Login;
 
 import java.util.Objects;
 

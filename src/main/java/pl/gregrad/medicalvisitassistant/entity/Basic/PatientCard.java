@@ -1,12 +1,14 @@
 package pl.gregrad.medicalvisitassistant.entity.Basic;
 
-import javax.persistence.CascadeType;
-import javax.persistence.FetchType;
-import javax.persistence.OneToMany;
-import javax.persistence.OneToOne;
+import javax.persistence.*;
+import java.util.List;
 
+@Entity
+@Table(name = "Patient_card")
 public class PatientCard {
 
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
     private String exam;
     private String diagnosis;
     private String symptoms;
@@ -17,9 +19,17 @@ public class PatientCard {
     private String procedures;
     private String drugs;
     @OneToOne(optional = false, fetch = FetchType.EAGER)
-    private Patient patient;
+    private PatientDetails patient;
     @OneToMany(mappedBy = "patient", cascade = CascadeType.REMOVE)
-    private Visit visit;
+    private List<Visit> visit;
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
 
     public String getExam() {
         return exam;
@@ -93,19 +103,16 @@ public class PatientCard {
         this.drugs = drugs;
     }
 
-    public Patient getPatient() {
+    public PatientDetails getPatient() {
         return patient;
     }
-
-    public void setPatient(Patient patient) {
+    public void setPatient(PatientDetails patient) {
         this.patient = patient;
     }
-
-    public Visit getVisit() {
+    public List<Visit> getVisit() {
         return visit;
     }
-
-    public void setVisit(Visit visit) {
+    public void setVisit(List<Visit> visit) {
         this.visit = visit;
     }
 }
