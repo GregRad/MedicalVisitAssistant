@@ -25,25 +25,17 @@ public class PatientController {
         model.addAttribute("patients", allPatients );
         return "Patient_List";
     }
+    @GetMapping("/details/{id}")
+    public String showPatientsDetails(@PathVariable Long id, Model model) {
+        PatientDTO patient = patientService.getPatientDetails(id);
+        model.addAttribute("patients", patient);
+        return "Patient_Details";
+    }
     @GetMapping("/card/{id}")
     public String showPatientsCard(@PathVariable Long id, Model model) {
-        Patient patient = patientService.findById(id);
+        PatientDTO patient = patientService.getPatientCard(id);
         model.addAttribute("patients", patient);
         return "Patient_Card";
     }
-    @GetMapping("/edit/{id}")
-    public String patientToEdit(@PathVariable Long id, Model model) {
-        model.addAttribute("editForm", patientService.findById(id));
-        return "Edit_Patient";
-    }
-    @PostMapping("/edit/{id}")
-    public String editPatient(@ModelAttribute Patient patient){
-        patientService.edit(patient);
-        return "redirect:/patients/allPatients";
-    }
-    @GetMapping("/delete/{id}")
-    public String deletePatient(@PathVariable Long id) {
-        patientService.delete(id);
-        return "redirect:/patients/allPatients";
-    }
+
 }

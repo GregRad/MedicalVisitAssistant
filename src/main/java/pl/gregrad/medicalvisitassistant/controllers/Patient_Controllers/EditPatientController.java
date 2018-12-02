@@ -5,7 +5,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import pl.gregrad.medicalvisitassistant.dtos.Basic.PatientDTO;
-import pl.gregrad.medicalvisitassistant.entity.Basic.Patient;
 import pl.gregrad.medicalvisitassistant.services.Basic.PatientService;
 
 @Controller
@@ -20,17 +19,17 @@ public class EditPatientController {
         model.addAttribute("editForm", patientService.findById(id));
         return "Edit_Patient";
     }
-    @PostMapping("/edit-patient/{id}")
+    @PostMapping("/edit/{id}")
     public String editPatient(@ModelAttribute PatientDTO patient){
         patientService.editPatient(patient);
         return "redirect:/patients/allPatients";
     }
-    @PostMapping("/edit-patient-details/{id}")
+    @PostMapping("/edit/{id}")
     public String editPatientDetails(@ModelAttribute PatientDTO patient){
         patientService.editPatientDetails(patient);
         return "redirect:/patients/allPatients";
     }
-    @PostMapping("/edit-patient-card/{id}")
+    @PostMapping("/edit/{id}")
     public String editPatientCard(@ModelAttribute PatientDTO patient){
         patientService.editPatientCard(patient);
         return "redirect:/patients/allPatients";
