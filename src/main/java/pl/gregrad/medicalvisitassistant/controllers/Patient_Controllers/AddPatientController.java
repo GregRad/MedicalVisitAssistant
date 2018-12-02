@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import pl.gregrad.medicalvisitassistant.dtos.Basic.AddPatientDTO;
+import pl.gregrad.medicalvisitassistant.dtos.Basic.PatientDTO;
 import pl.gregrad.medicalvisitassistant.services.Basic.AddPatientService;
 
 @Controller
@@ -19,11 +19,11 @@ public class AddPatientController {
 
     @GetMapping("/addPatient")
     public String showAddPatientForm (Model model) {
-        model.addAttribute("patientForm", new AddPatientDTO());
+        model.addAttribute("patientForm", new PatientDTO());
         return "Add_Patient_Form";
     }
     @PostMapping("/addPatient")
-    public String addPatient(@ModelAttribute AddPatientDTO form) {
+    public String addPatient(@ModelAttribute PatientDTO form) {
         addPatientService.addPatient(form);
         return "Home_Page";
     }

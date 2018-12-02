@@ -5,6 +5,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
+import pl.gregrad.medicalvisitassistant.dtos.Basic.PatientDTO;
+import pl.gregrad.medicalvisitassistant.entity.Basic.Patient;
 import pl.gregrad.medicalvisitassistant.entity.Basic.PatientDetails;
 import pl.gregrad.medicalvisitassistant.services.Basic.PatientService;
 
@@ -19,13 +21,13 @@ public class PatientController {
 
     @GetMapping("/allPatients")
     public String showPatients(Model model) {
-        List<PatientDetails> allPatients = patientService.findAllPatients();
+        List<PatientDTO> allPatients = patientService.findAllPatients();
         model.addAttribute("patients", allPatients );
         return "Patient_List";
     }
     @GetMapping("/card/{id}")
     public String showPatientsCard(@PathVariable Long id, Model model) {
-        PatientDetails patient = patientService.findById(id);
+        Patient patient = patientService.findById(id);
         model.addAttribute("patients", patient);
         return "Patient_Card";
     }
@@ -35,7 +37,7 @@ public class PatientController {
         return "Edit_Patient";
     }
     @PostMapping("/edit/{id}")
-    public String editPatient(@ModelAttribute PatientDetails patient){
+    public String editPatient(@ModelAttribute Patient patient){
         patientService.edit(patient);
         return "redirect:/patients/allPatients";
     }

@@ -3,7 +3,7 @@ package pl.gregrad.medicalvisitassistant.services.Basic;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import pl.gregrad.medicalvisitassistant.dtos.Basic.AddPatientDTO;
+import pl.gregrad.medicalvisitassistant.dtos.Basic.PatientDTO;
 import pl.gregrad.medicalvisitassistant.entity.Basic.Patient;
 import pl.gregrad.medicalvisitassistant.entity.Basic.PatientDetails;
 import pl.gregrad.medicalvisitassistant.entity.Basic.PatientCard;
@@ -26,7 +26,7 @@ public class AddPatientService {
     @Autowired
     private PatientCardRepository patientCardRepository;
 
-    public void addPatient(AddPatientDTO form) {
+    public void addPatient(PatientDTO form) {
 
         Patient newPatient = new Patient();
         newPatient.setName(form.getName());
