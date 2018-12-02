@@ -75,13 +75,16 @@ public class PatientService {
         patientDetailsRepository.delete(patientDetailsRepository.findOne(id));
         patientCardRepository.delete(patientCardRepository.findOne(id));
     }
-    public void editPatient(Patient patient) {
-        patientRepository.save(patient);
+    public void editPatient(PatientDTO patient) {
+        Patient editPatient = patientRepository.findOne(patient.getId());
+        patientRepository.save(editPatient);
     }
-    public void editPatientDetails(PatientDetails patientDetails) {
-        patientDetailsRepository.save(patientDetails);
+    public void editPatientDetails(PatientDTO patientDetails) {
+        PatientDetails editPatientDetails = patientDetailsRepository.findOne(patientDetails.getId());
+        patientDetailsRepository.save(editPatientDetails);
     }
-    public void editPatientCard (PatientCard patientCard) {
-        patientCardRepository.save(patientCard);
+    public void editPatientCard (PatientDTO patientCard) {
+        PatientCard editPatientCard = patientCardRepository.findOne(patientCard.getId());
+        patientCardRepository.save(editPatientCard);
     }
 }
