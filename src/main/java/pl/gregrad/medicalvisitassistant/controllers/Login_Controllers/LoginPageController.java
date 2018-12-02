@@ -5,7 +5,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 import pl.gregrad.medicalvisitassistant.dtos.Login.LoginFormDTO;
-import pl.gregrad.medicalvisitassistant.dtos.Basic.TherapistDTO;
+import pl.gregrad.medicalvisitassistant.dtos.Login.TherapistDTO;
 import pl.gregrad.medicalvisitassistant.services.Login_Service.LoginService;
 
 import javax.servlet.http.HttpSession;

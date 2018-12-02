@@ -7,7 +7,6 @@ import java.time.LocalDateTime;
 public class VisitDTO {
 
     private Long id;
-    private String patientDetails;
     private LocalDateTime visitDate;
     private Integer charge;
     private String visitDescription;
@@ -44,14 +43,6 @@ public class VisitDTO {
 
     public void setVisitDescription(String visitDescription) {
         this.visitDescription = visitDescription;
-    }
-
-    public String getPatientDetails() {
-        return patientDetails;
-    }
-
-    public void setPatientDetails(String patientDetails) {
-        this.patientDetails = patientDetails;
     }
 
     public Long getPatientId() {
