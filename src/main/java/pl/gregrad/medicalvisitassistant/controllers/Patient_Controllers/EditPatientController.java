@@ -24,12 +24,12 @@ public class EditPatientController {
         patientService.editPatient(patient);
         return "redirect:/patients/allPatients";
     }
-    @PostMapping("/edit/{id}")
+    @PostMapping("/edit-details/{id}")
     public String editPatientDetails(@ModelAttribute PatientDTO patient){
         patientService.editPatientDetails(patient);
         return "redirect:/patients/allPatients";
     }
-    @PostMapping("/edit/{id}")
+    @PostMapping("/edit-card/{id}")
     public String editPatientCard(@ModelAttribute PatientDTO patient){
         patientService.editPatientCard(patient);
         return "redirect:/patients/allPatients";
