@@ -39,6 +39,7 @@ public class AddPatientService {
         newPatientDetails.setApartmentNumber(form.getApartmentNumber());
         newPatientDetails.setPhoneNumber(form.getPhoneNumber());
         newPatientDetails.setEmail(form.getEmail());
+        newPatientDetails.setPatient(newPatient);
         patientDetailsRepository.save(newPatientDetails);
 
         PatientCard newPatientCard = new PatientCard();
@@ -51,6 +52,7 @@ public class AddPatientService {
         newPatientCard.setMedicines(form.getMedicines());
         newPatientCard.setProcedures(form.getProcedures());
         newPatientCard.setDrugs(form.getDrugs());
+        newPatientCard.setPatient(newPatient);
         patientCardRepository.save(newPatientCard);
     }
 }

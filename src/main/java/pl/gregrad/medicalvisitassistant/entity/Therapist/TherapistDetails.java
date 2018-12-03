@@ -45,7 +45,7 @@ public class TherapistDetails {
         return therapist;
     }
 
-    public void setUser(Therapist therapist) {
+    public void setTherapist(Therapist therapist) {
         this.therapist = therapist;
     }
 }

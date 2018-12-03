@@ -42,7 +42,7 @@ public class RegistrationService {
         TherapistDetails details = new TherapistDetails();
         details.setFirstName(form.getFirstName());
         details.setLastName(form.getLastName());
-        details.setUser(therapist);
+        details.setTherapist(therapist);
         therapistDetailsRepository.save(details);
 
         TherapistLogInData loginData = new TherapistLogInData();
