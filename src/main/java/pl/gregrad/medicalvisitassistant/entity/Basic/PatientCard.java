@@ -19,7 +19,7 @@ public class PatientCard {
     private String procedures;
     private String drugs;
     @OneToOne(optional = false, fetch = FetchType.EAGER)
-    private PatientDetails patient;
+    private Patient patient;
     @OneToMany(mappedBy = "patient", cascade = CascadeType.REMOVE)
     private List<Visit> visit;
 
@@ -103,10 +103,10 @@ public class PatientCard {
         this.drugs = drugs;
     }
 
-    public PatientDetails getPatient() {
+    public Patient getPatient() {
         return patient;
     }
-    public void setPatient(PatientDetails patient) {
+    public void setPatient(Patient patient) {
         this.patient = patient;
     }
     public List<Visit> getVisit() {
