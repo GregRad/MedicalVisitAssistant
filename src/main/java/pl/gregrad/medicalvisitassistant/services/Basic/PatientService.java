@@ -36,7 +36,9 @@ public class PatientService {
             patientData.setId(p.getId());
             patientData.setName(p.getName());
             patientData.setSurname(p.getSurname());
+            allPatients.add(patientData);
         }
+
     return allPatients;
     }
     public Patient findById(Long id) {

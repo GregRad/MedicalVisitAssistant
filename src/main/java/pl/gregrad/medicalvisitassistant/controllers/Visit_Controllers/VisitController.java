@@ -5,6 +5,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import pl.gregrad.medicalvisitassistant.dtos.Basic.VisitDTO;
+import pl.gregrad.medicalvisitassistant.entity.Basic.Visit;
 import pl.gregrad.medicalvisitassistant.services.Basic.VisitService;
 
 import java.util.List;
@@ -16,18 +17,21 @@ public class VisitController {
     @Autowired
     private VisitService visitService;
 
-    @GetMapping("/patientVisit/{patientId:[0-9]+}")
-    public String showPatientVisits (@PathVariable Long patientId, Model model) {
-        List<VisitDTO> visits = visitService.findByPatientId(patientId);
-        model.addAttribute("patientVisits", visits);
-        return "Patient_Visits";
-    }
     @GetMapping("/allVisits")
     public String showAllVisit (Model model) {
         List<VisitDTO> allVisits = visitService.findAllVisit();
         model.addAttribute("visits", allVisits);
+        System.out.println(allVisits);
         return "Visit_List";
     }
+
+    @GetMapping("/patientVisit/{patientCardId:[0-9]+}")
+    public String showPatientVisits (@PathVariable Long patientCardId, Model model) {
+        List<VisitDTO> visits = visitService.findByPatientId(patientCardId);
+        model.addAttribute("patientVisits", visits);
+        return "Patient_Visits";
+    }
+
 
 
 }

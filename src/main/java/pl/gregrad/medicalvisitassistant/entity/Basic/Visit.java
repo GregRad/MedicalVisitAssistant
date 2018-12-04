@@ -13,8 +13,9 @@ public class Visit {
     private LocalDateTime visitDate;
     private Integer charge;
     private String visitDescription;
+    private String patientDetails;
     @ManyToOne
-    private PatientCard patient;
+    private Patient patient;
 
 
     public Long getId() {
@@ -49,10 +50,11 @@ public class Visit {
         this.visitDescription = visitDescription;
     }
 
-    public PatientCard getPatient() {
-        return patient;
+    public String getPatientDetails() { return patientDetails; }
+
+    public void setPatientDetails(String patientDetails) { this.patientDetails = patientDetails;
     }
-    public void setPatient(PatientCard patient) {
-        this.patient = patient;
-    }
+    public Patient getPatient() { return patient; }
+
+    public void setPatient(Patient patient) { this.patient = patient; }
 }

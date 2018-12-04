@@ -11,6 +11,7 @@ public class VisitDTO {
     private Integer charge;
     private String visitDescription;
     private Long patientId;
+    private String patientDetails;
 
 
     public Long getId() {
@@ -45,11 +46,11 @@ public class VisitDTO {
         this.visitDescription = visitDescription;
     }
 
-    public Long getPatientId() {
-        return patientId;
-    }
+    public String getPatientDetails() { return patientDetails; }
 
-    public void setPatientId(Long patientId) {
-        this.patientId = patientId;
-    }
+    public void setPatientDetails(String patientDetails) { this.patientDetails = patientDetails; }
+
+    public Long getPatientId() { return patientId; }
+
+    public void setPatientId(Long patientId) { this.patientId = patientId; }
 }

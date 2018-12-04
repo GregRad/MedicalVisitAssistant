@@ -1,6 +1,7 @@
 package pl.gregrad.medicalvisitassistant.entity.Basic;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name = "Patient")
@@ -10,6 +11,8 @@ public class Patient {
     private Long id;
     private String name;
     private String surname;
+    @OneToMany(mappedBy = "patient", cascade = CascadeType.REMOVE)
+    private List<Visit> visit;
 
     public Long getId() {
         return id;
@@ -33,5 +36,12 @@ public class Patient {
 
     public void setSurname(String surname) {
         this.surname = surname;
+    }
+    public List<Visit> getVisit() {
+        return visit;
+    }
+
+    public void setVisit(List<Visit> visit) {
+        this.visit = visit;
     }
 }

@@ -20,8 +20,7 @@ public class PatientCard {
     private String drugs;
     @OneToOne(optional = false, fetch = FetchType.EAGER)
     private Patient patient;
-    @OneToMany(mappedBy = "patient", cascade = CascadeType.REMOVE)
-    private List<Visit> visit;
+
 
     public Long getId() {
         return id;
@@ -106,13 +105,9 @@ public class PatientCard {
     public Patient getPatient() {
         return patient;
     }
+
     public void setPatient(Patient patient) {
         this.patient = patient;
     }
-    public List<Visit> getVisit() {
-        return visit;
-    }
-    public void setVisit(List<Visit> visit) {
-        this.visit = visit;
-    }
+
 }

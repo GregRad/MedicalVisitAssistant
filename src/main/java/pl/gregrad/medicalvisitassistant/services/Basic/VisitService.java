@@ -3,7 +3,9 @@ package pl.gregrad.medicalvisitassistant.services.Basic;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import pl.gregrad.medicalvisitassistant.dtos.Basic.VisitDTO;
+import pl.gregrad.medicalvisitassistant.entity.Basic.PatientCard;
 import pl.gregrad.medicalvisitassistant.entity.Basic.Visit;
+import pl.gregrad.medicalvisitassistant.repositories.Basic.PatientCardRepository;
 import pl.gregrad.medicalvisitassistant.repositories.Basic.VisitRepository;
 import javax.transaction.Transactional;
 import java.util.ArrayList;
@@ -16,15 +18,25 @@ public class VisitService {
     @Autowired
     private VisitRepository visitRepository;
 
+    @Autowired
+    private PatientCardRepository patientCardRepository;
+
     public List<VisitDTO> findAllVisit() {
         List<Visit> visits = visitRepository.findAll();
         List<VisitDTO> allVisits = new ArrayList<>();
         for ( Visit v : visits) {
+            if (v.getPatient() == null) {
+                continue;
+            }
             VisitDTO visitData = new VisitDTO();
+            visitData.setId(v.getId());
             visitData.setVisitDate(v.getVisitDate());
             visitData.setCharge(v.getCharge());
             visitData.setVisitDescription(v.getVisitDescription());
+            visitData.setPatientDetails(v.getPatient().getName()
+                    + " " + v.getPatient().getSurname());
             visitData.setPatientId(v.getPatient().getId());
+            allVisits.add(visitData);
         }
         return allVisits;
     }
