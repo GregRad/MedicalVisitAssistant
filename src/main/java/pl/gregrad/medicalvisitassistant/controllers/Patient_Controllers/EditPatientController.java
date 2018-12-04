@@ -19,6 +19,16 @@ public class EditPatientController {
         model.addAttribute("editForm", patientService.findById(id));
         return "Edit_Patient";
     }
+    @GetMapping("/edit-details/{id}")
+    public String patientDetailsToEdit(@PathVariable Long id, Model model) {
+        model.addAttribute("editForm", patientService.findById(id));
+        return "Edit_Patient_Details";
+    }
+    @GetMapping("/edit-card/{id}")
+    public String patientCardToEdit(@PathVariable Long id, Model model) {
+        model.addAttribute("editForm", patientService.findById(id));
+        return "Edit_Patient_Card";
+    }
     @PostMapping("/edit/{id}")
     public String editPatient(@ModelAttribute PatientDTO patient){
         patientService.editPatient(patient);
