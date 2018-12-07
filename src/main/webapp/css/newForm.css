@@ -19,18 +19,6 @@ body {
     height: 65px;
     padding-top: 10px;
 }
-#patient {
-    display: flex;
-
-}
-#data {
-    margin-left: auto;
-    padding-right: 50px;
-}
-#card{
-
-    margin-right: auto;
-}
 a {
     padding-right: 20px;
 }

@@ -16,27 +16,17 @@ public class EditPatientController {
 
     @GetMapping("/edit/{id}")
     public String patientToEdit(@PathVariable Long id, Model model) {
-        model.addAttribute("editForm", patientService.findById(id));
+        model.addAttribute("editForm", patientService.findPatientById(id));
         return "Edit_Patient";
-    }
-    @GetMapping("/edit-details/{id}")
-    public String patientDetailsToEdit(@PathVariable Long id, Model model) {
-        model.addAttribute("editForm", patientService.findById(id));
-        return "Edit_Patient_Details";
     }
     @GetMapping("/edit-card/{id}")
     public String patientCardToEdit(@PathVariable Long id, Model model) {
-        model.addAttribute("editForm", patientService.findById(id));
+        model.addAttribute("editCardForm", patientService.findPatientCardById(id));
         return "Edit_Patient_Card";
     }
     @PostMapping("/edit/{id}")
     public String editPatient(@ModelAttribute PatientDTO patient){
         patientService.editPatient(patient);
-        return "redirect:/patients/allPatients";
-    }
-    @PostMapping("/edit-details/{id}")
-    public String editPatientDetails(@ModelAttribute PatientDTO patient){
-        patientService.editPatientDetails(patient);
         return "redirect:/patients/allPatients";
     }
     @PostMapping("/edit-card/{id}")

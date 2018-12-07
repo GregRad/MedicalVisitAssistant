@@ -19,11 +19,12 @@
     <a href="/patients/allPatients"><img src="/images/navigation_Patient_List.png" title="Lista pacjentów"></a>
     <a href="/visit/allVisits"><img src="/images/navigation_Visit_List.png" title="Lista wizyt"></a>
 </div>
-<p> Edytuj pacjenta</p>
+<p> Edytuj kartę pacjenta</p>
 <div id="patient">
     <div id="card">
         <h4>Edytuj kartę badania:</h4>
         <br/>
+        <form:form modelAttribute="editCardForm" method="post">
         <form:input class="add" path="diagnosis" placeholder="Rozpoznanie"/><br/>
         <br/>
         <form:input class="add" path="symptoms" placeholder="Objawy"/><br/>
@@ -42,6 +43,7 @@
         <br/>
         <form:textarea class="add" path="exam" placeholder="Badanie"/><br/>
         <br/>
+        <input type="submit" id="confirm" value="Dodaj"/>
         <input type="reset" id="clear" value="Wyczyść"/>
         </form:form>
     </div>

@@ -41,8 +41,35 @@ public class PatientService {
 
     return allPatients;
     }
-    public Patient findById(Long id) {
-        return patientRepository.findOne(id);
+    public PatientDTO findPatientById(Long id) {
+        Patient patient = patientRepository.findOne(id);
+        PatientDetails patientDetails = patientDetailsRepository.findOne(id);
+        PatientDTO findPatient = new PatientDTO();
+        findPatient.setId(patient.getId());
+        findPatient.setName(patient.getName());
+        findPatient.setSurname(patient.getSurname());
+        findPatient.setAddress(patientDetails.getAddress());
+        findPatient.setHouseNumber(patientDetails.getHouseNumber());
+        findPatient.setApartmentNumber(patientDetails.getApartmentNumber());
+        findPatient.setPhoneNumber(patientDetails.getPhoneNumber());
+        findPatient.setEmail(patientDetails.getEmail());
+
+        return findPatient;
+    }
+    public PatientDTO findPatientCardById(Long id) {
+        PatientCard patientCard = patientCardRepository.findOne(id);
+        PatientDTO findCardPatient = new PatientDTO();
+        findCardPatient.setExam(patientCard.getExam());
+        findCardPatient.setDiagnosis(patientCard.getDiagnosis());
+        findCardPatient.setSymptoms(patientCard.getSymptoms());
+        findCardPatient.setFunctioning(patientCard.getFunctioning());
+        findCardPatient.setRehab(patientCard.getRehab());
+        findCardPatient.setDrugs(patientCard.getDrugs());
+        findCardPatient.setProcedures(patientCard.getProcedures());
+        findCardPatient.setMedicines(patientCard.getMedicines());
+        findCardPatient.setDiseases(patientCard.getDiseases());
+
+        return findCardPatient;
     }
     public PatientDTO getPatientDetails(Long id){
         PatientDetails patient = patientDetailsRepository.findOne(id);
@@ -74,16 +101,10 @@ public class PatientService {
     }
     public void delete(Long id) {
         patientRepository.delete(patientRepository.findOne(id));
-        patientDetailsRepository.delete(patientDetailsRepository.findOne(id));
-        patientCardRepository.delete(patientCardRepository.findOne(id));
     }
     public void editPatient(PatientDTO patient) {
         Patient editPatient = patientRepository.findOne(patient.getId());
         patientRepository.save(editPatient);
-    }
-    public void editPatientDetails(PatientDTO patientDetails) {
-        PatientDetails editPatientDetails = patientDetailsRepository.findOne(patientDetails.getId());
-        patientDetailsRepository.save(editPatientDetails);
     }
     public void editPatientCard (PatientDTO patientCard) {
         PatientCard editPatientCard = patientCardRepository.findOne(patientCard.getId());

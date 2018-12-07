@@ -18,8 +18,6 @@ public class VisitService {
     @Autowired
     private VisitRepository visitRepository;
 
-    @Autowired
-    private PatientCardRepository patientCardRepository;
 
     public List<VisitDTO> findAllVisit() {
         List<Visit> visits = visitRepository.findAll();

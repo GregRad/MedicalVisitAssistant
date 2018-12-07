@@ -14,7 +14,7 @@ public class Visit {
     private Integer charge;
     private String visitDescription;
     private String patientDetails;
-    @ManyToOne
+    @ManyToOne(optional = false, fetch = FetchType.EAGER)
     private Patient patient;
 
 

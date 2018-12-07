@@ -13,6 +13,10 @@ public class Patient {
     private String surname;
     @OneToMany(mappedBy = "patient", cascade = CascadeType.REMOVE)
     private List<Visit> visit;
+    @OneToOne(mappedBy = "patient", cascade = CascadeType.REMOVE)
+    private PatientCard patientCard;
+    @OneToOne(mappedBy = "patient", cascade = CascadeType.REMOVE)
+    private PatientDetails patientDetails;
 
     public Long getId() {
         return id;
@@ -44,4 +48,13 @@ public class Patient {
     public void setVisit(List<Visit> visit) {
         this.visit = visit;
     }
+
+    public PatientCard getPatientCard() { return patientCard;
+    }
+    public void setPatientCard(PatientCard patientCard) { this.patientCard = patientCard;
+    }
+
+    public PatientDetails getPatientDetails() { return patientDetails; }
+
+    public void setPatientDetails(PatientDetails patientDetails) { this.patientDetails = patientDetails; }
 }
