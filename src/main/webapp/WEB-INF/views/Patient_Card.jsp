@@ -20,45 +20,8 @@
     <a href="/patients/allPatients"><img src="/images/navigation_Patient_List.png" title="Lista pacjentów"></a>
     <a href="/visit/allVisits"><img src="/images/navigation_Visit_List.png" title="Lista wizyt"></a>
 </div>
-<p>Karta Pacjenta</p>
-<table>
-    <th>ID</th>
-    <th>Imię</th>
-    <th>Nazwisko</th>
-    <th>Ulica</th>
-    <th>Numer domu</th>
-    <th>Numer mieszkania</th>
-    <th>Numer telefonu</th>
-    <th>Email</th>
+<p>${patientsCard.patientData}</p>
 
-        <tr>
-            <td>
-                    ${patients.id}
-            </td>
-            <td>
-                    ${patients.name}
-            </td>
-            <td>
-                    ${patients.surname}
-            </td>
-            <td>
-                    ${patients.address}
-            </td>
-            <td>
-                    ${patients.houseNumber}
-            </td>
-            <td>
-                    ${patients.apartmentNumber}
-            </td>
-            <td>
-                    ${patients.phoneNumber}
-            </td>
-            <td>
-                    ${patients.email}
-            </td>
-        </tr>
-</table>
-<br/>
 <table>
     <th>Rozpoznanie:</th>
     <th>Objawy:</th>
@@ -70,28 +33,28 @@
     <th>Używki:</th>
     <tr>
         <td>
-            ${patients.diagnosis}
+            ${patientsCard.diagnosis}
         </td>
         <td>
-            ${patients.symptoms}
+            ${patientsCard.symptoms}
         </td>
         <td>
-            ${patients.diseases}
+            ${patientsCard.diseases}
         </td>
         <td>
-            ${patients.functioning}
+            ${patientsCard.functioning}
         </td>
         <td>
-            ${patients.rehab}
+            ${patientsCard.rehab}
         </td>
         <td>
-            ${patients.medicines}
+            ${patientsCard.medicines}
         </td>
         <td>
-            ${patients.procedures}
+            ${patientsCard.procedures}
         </td>
         <td>
-            ${patients.drugs}
+            ${patientsCard.drugs}
         </td>
 
     </tr>
@@ -100,7 +63,7 @@
     <th>Badanie: </th>
     <tr>
         <td>
-            ${patients.exam}
+            ${patientsCard.exam}
         </td>
     </tr>
 </table>
@@ -111,7 +74,7 @@
     </th>
         <tr>
             <td>
-                <a href="/visit/patientVisit/${patients.id}">wyświetl</a>
+                <a href="/visit/patientVisit/${patientsCard.id}">wyświetl</a>
             </td>
         </tr>
     </th>

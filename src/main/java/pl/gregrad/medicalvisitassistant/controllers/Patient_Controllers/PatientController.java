@@ -24,16 +24,16 @@ public class PatientController {
         System.out.println(allPatients);
         return "Patient_List";
     }
-    @GetMapping("/details/{id}")
-    public String showPatientsDetails(@PathVariable Long id, Model model) {
-        PatientDTO patient = patientService.getPatientDetails(id);
-        model.addAttribute("patients", patient);
-        return "Patient_Details";
-    }
+//    @GetMapping("/details/{id}")
+//    public String showPatientsDetails(@PathVariable Long id, Model model) {
+//        PatientDTO patient = patientService.getPatientDetails(id);
+//        model.addAttribute("patients", patient);
+//        return "Patient_Details";
+//    }
     @GetMapping("/card/{id}")
     public String showPatientsCard(@PathVariable Long id, Model model) {
-        PatientDTO patient = patientService.getPatientCard(id);
-        model.addAttribute("patients", patient);
+        PatientDTO patientCard = patientService.findPatientCardById(id);
+        model.addAttribute("patientsCard", patientCard);
         return "Patient_Card";
     }
 }

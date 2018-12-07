@@ -59,6 +59,8 @@ public class PatientService {
     public PatientDTO findPatientCardById(Long id) {
         PatientCard patientCard = patientCardRepository.findOne(id);
         PatientDTO findCardPatient = new PatientDTO();
+        findCardPatient.setId(patientCard.getPatient().getId());
+        findCardPatient.setPatientData(patientCard.getPatient().getName());
         findCardPatient.setExam(patientCard.getExam());
         findCardPatient.setDiagnosis(patientCard.getDiagnosis());
         findCardPatient.setSymptoms(patientCard.getSymptoms());
@@ -82,22 +84,6 @@ public class PatientService {
         patientDetails.setEmail(patient.getEmail());
 
         return patientDetails;
-    }
-    public PatientDTO getPatientCard(Long id) {
-        PatientCard patient = patientCardRepository.findOne(id);
-        PatientDTO patientCard = new PatientDTO();
-        patientCard.setId(patient.getPatient().getId());
-        patientCard.setExam(patient.getExam());
-        patientCard.setDiagnosis(patient.getDiagnosis());
-        patientCard.setSymptoms(patient.getSymptoms());
-        patientCard.setDiseases(patient.getDiseases());
-        patientCard.setRehab(patient.getRehab());
-        patientCard.setFunctioning(patient.getFunctioning());
-        patientCard.setMedicines(patient.getMedicines());
-        patientCard.setProcedures(patient.getProcedures());
-        patientCard.setDrugs(patient.getDrugs());
-
-        return patientCard;
     }
     public void delete(Long id) {
         patientRepository.delete(patientRepository.findOne(id));

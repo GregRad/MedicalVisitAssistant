@@ -18,6 +18,7 @@ public class PatientCard {
     private String medicines;
     private String procedures;
     private String drugs;
+    private String patientData;
     @OneToOne(optional = false, fetch = FetchType.EAGER)
     private Patient patient;
 
@@ -110,4 +111,11 @@ public class PatientCard {
         this.patient = patient;
     }
 
+    public String getPatientData() {
+        return patientData;
+    }
+
+    public void setPatientData(String patientData) {
+        this.patientData = patientData;
+    }
 }
