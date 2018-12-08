@@ -33,6 +33,8 @@
         <br/>
         <form:input class="add" path="functioning" placeholder="Funkcjonowanie"/><br/>
         <br/>
+        <form:input class="add" path="activity" placeholder="Aktywność fizyczna"/><br/>
+        <br/>
         <form:input class="add" path="rehab" placeholder="Dotychczasowa rehabilitacja"/><br/>
         <br/>
         <form:input class="add" path="medicines" placeholder="Leki"/><br/>

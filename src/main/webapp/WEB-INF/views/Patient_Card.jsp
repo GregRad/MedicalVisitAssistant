@@ -54,6 +54,7 @@
     <th>Objawy:</th>
     <th>Choroby współistniejące:</th>
     <th>Funkcjonowanie:</th>
+    <th>Aktywność fizyczna:</th>
     </tr>
     <tr>
         <td>
@@ -68,6 +69,9 @@
         <td>
             ${patientsCard.functioning}
         </td>
+        <td>
+            ${patientsCard.activity}
+        </td>
     </tr>
 </table>
 <table>
@@ -76,6 +80,7 @@
         <th>Leki:</th>
         <th>Zabiegi operacyjne, urazy:</th>
         <th>Używki:</th>
+        <th>Edytuj kartę</th>
     </tr>
     <tr>
         <td>
@@ -89,6 +94,9 @@
         </td>
         <td>
             ${patientsCard.drugs}
+        </td>
+        <td>
+            <a href="/patients/edit-card/${patientsCard.id}">edytuj</a>
         </td>
     </tr>
 </table>
@@ -123,17 +131,6 @@
             </td>
         </tr>
     </c:forEach>
-</table>
-<table>
-    <th>
-        Wizyty
-    </th>
-        <tr>
-            <td>
-                <a href="/visit/patientVisit/${patientsCard.id}">wyświetl</a>
-            </td>
-        </tr>
-    </th>
 </table>
 <br/>
 <div id="back">
