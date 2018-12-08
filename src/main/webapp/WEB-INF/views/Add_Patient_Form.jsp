@@ -40,13 +40,6 @@
         <form:input class="add" path="email" placeholder="E-mail"/><br/>
         <br/>
         <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <input type="submit" id="confirm" value="Dodaj"/>
-        <br/>
     </div>
     <div id="card">
     <h4>Karta badania:</h4>
@@ -69,6 +62,7 @@
         <br/>
         <form:textarea class="add" path="exam" placeholder="Badanie"/><br/>
         <br/>
+        <input type="submit" id="confirm" value="Dodaj"/>
         <input type="reset" id="clear" value="Wyczyść"/>
     </form:form>
     </div>

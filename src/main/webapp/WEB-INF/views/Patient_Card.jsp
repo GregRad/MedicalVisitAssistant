@@ -21,16 +21,40 @@
     <a href="/visit/allVisits"><img src="/images/navigation_Visit_List.png" title="Lista wizyt"></a>
 </div>
 <p>${patientsCard.patientData}</p>
-
 <table>
+    <tr>
+    <th>Ulica</th>
+    <th>Numer domu</th>
+    <th>Numer mieszkania</th>
+    <th>Numer telefonu</th>
+    <th>Email</th>
+    </tr>
+    <tr>
+        <td>
+            ${patients.address}
+        </td>
+        <td>
+            ${patients.houseNumber}
+        </td>
+        <td>
+            ${patients.apartmentNumber}
+        </td>
+        <td>
+            ${patients.phoneNumber}
+        </td>
+        <td>
+            ${patients.email}
+        </td>
+    </tr>
+</table>
+<br/>
+<table>
+    <tr>
     <th>Rozpoznanie:</th>
     <th>Objawy:</th>
     <th>Choroby współistniejące:</th>
     <th>Funkcjonowanie:</th>
-    <th>Dotychczasowa rehabilitacja:</th>
-    <th>Leki:</th>
-    <th>Zabiegi operacyjne, urazy:</th>
-    <th>Używki:</th>
+    </tr>
     <tr>
         <td>
             ${patientsCard.diagnosis}
@@ -44,6 +68,16 @@
         <td>
             ${patientsCard.functioning}
         </td>
+    </tr>
+</table>
+<table>
+    <tr>
+        <th>Dotychczasowa rehabilitacja:</th>
+        <th>Leki:</th>
+        <th>Zabiegi operacyjne, urazy:</th>
+        <th>Używki:</th>
+    </tr>
+    <tr>
         <td>
             ${patientsCard.rehab}
         </td>
@@ -56,7 +90,6 @@
         <td>
             ${patientsCard.drugs}
         </td>
-
     </tr>
 </table>
 <table>
@@ -68,6 +101,29 @@
     </tr>
 </table>
 <br/>
+<table>
+    <th>ID</th>
+    <th>Data</th>
+    <th>Opis</th>
+    <th>Cena</th>
+
+    <c:forEach items= "${visits}" var="visit">
+        <tr>
+            <td>
+                    ${visit.id}
+            </td>
+            <td>
+                    ${visit.visitDate}
+            </td>
+            <td>
+                    ${visit.visitDescription}
+            </td>
+            <td>
+                    ${visit.charge}
+            </td>
+        </tr>
+    </c:forEach>
+</table>
 <table>
     <th>
         Wizyty
