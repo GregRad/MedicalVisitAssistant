@@ -18,7 +18,6 @@ public class VisitService {
     @Autowired
     private VisitRepository visitRepository;
 
-
     public List<VisitDTO> findAllVisit() {
         List<Visit> visits = visitRepository.findAll();
         List<VisitDTO> allVisits = new ArrayList<>();
@@ -38,7 +37,6 @@ public class VisitService {
         }
         return allVisits;
     }
-
     public VisitDTO findById (Long id) {
         Visit visitById = visitRepository.findOne(id);
         VisitDTO patientVisit = new VisitDTO();
@@ -48,20 +46,20 @@ public class VisitService {
 
         return patientVisit;
     }
-
     public List<VisitDTO> findByPatientId (Long id){
         List<Visit> patientVisits = visitRepository.findByPatientId(id);
         List<VisitDTO> visitByPatient = new ArrayList<>();
         for ( Visit v : patientVisits) {
             VisitDTO patientVisit = new VisitDTO();
+            patientVisit.setId(v.getId());
             patientVisit.setVisitDate(v.getVisitDate());
             patientVisit.setCharge(v.getCharge());
             patientVisit.setVisitDescription(v.getVisitDescription());
+            visitByPatient.add(patientVisit);
 
         }
         return visitByPatient;
     }
-
     public void delete (Long id) {
         visitRepository.delete(visitRepository.findOne(id));
     }

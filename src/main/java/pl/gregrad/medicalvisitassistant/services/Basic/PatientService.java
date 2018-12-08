@@ -4,6 +4,7 @@ package pl.gregrad.medicalvisitassistant.services.Basic;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import pl.gregrad.medicalvisitassistant.dtos.Basic.PatientDTO;
+import pl.gregrad.medicalvisitassistant.dtos.Basic.VisitDTO;
 import pl.gregrad.medicalvisitassistant.entity.Basic.Patient;
 import pl.gregrad.medicalvisitassistant.entity.Basic.PatientCard;
 import pl.gregrad.medicalvisitassistant.entity.Basic.PatientDetails;
@@ -60,7 +61,7 @@ public class PatientService {
         PatientCard patientCard = patientCardRepository.findOne(id);
         PatientDTO findCardPatient = new PatientDTO();
         findCardPatient.setId(patientCard.getPatient().getId());
-        findCardPatient.setPatientData(patientCard.getPatient().getName());
+        findCardPatient.setPatientData(patientCard.getPatient().getName() + " " + patientCard.getPatient().getSurname());
         findCardPatient.setExam(patientCard.getExam());
         findCardPatient.setDiagnosis(patientCard.getDiagnosis());
         findCardPatient.setSymptoms(patientCard.getSymptoms());
@@ -73,7 +74,7 @@ public class PatientService {
 
         return findCardPatient;
     }
-    public PatientDTO getPatientDetails(Long id){
+    public PatientDTO getPatientDetails(Long id) {
         PatientDetails patient = patientDetailsRepository.findOne(id);
         PatientDTO patientDetails = new PatientDTO();
         patientDetails.setId(patient.getPatient().getId());
@@ -88,9 +89,20 @@ public class PatientService {
     public void delete(Long id) {
         patientRepository.delete(patientRepository.findOne(id));
     }
+
     public void editPatient(PatientDTO patient) {
         Patient editPatient = patientRepository.findOne(patient.getId());
+        PatientDetails editPatientDetails = patientDetailsRepository.findOne(patient.getId());
+        editPatient.setName(patient.getName());
+        editPatient.setSurname(patient.getSurname());
+        editPatientDetails.setAddress(patient.getAddress());
+        editPatientDetails.setHouseNumber(patient.getHouseNumber());
+        editPatientDetails.setApartmentNumber(patient.getApartmentNumber());
+        editPatientDetails.setPhoneNumber(patient.getPhoneNumber());
+        editPatientDetails.setEmail(patient.getEmail());
+
         patientRepository.save(editPatient);
+        patientDetailsRepository.save(editPatientDetails);
     }
     public void editPatientCard (PatientDTO patientCard) {
         PatientCard editPatientCard = patientCardRepository.findOne(patientCard.getId());

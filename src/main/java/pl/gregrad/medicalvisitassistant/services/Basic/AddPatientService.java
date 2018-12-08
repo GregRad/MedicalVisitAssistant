@@ -52,6 +52,7 @@ public class AddPatientService {
         newPatientCard.setMedicines(form.getMedicines());
         newPatientCard.setProcedures(form.getProcedures());
         newPatientCard.setDrugs(form.getDrugs());
+        newPatientCard.setPatientData(form.getName() + " " + form.getName());
         newPatientCard.setPatient(newPatient);
         patientCardRepository.save(newPatientCard);
     }
