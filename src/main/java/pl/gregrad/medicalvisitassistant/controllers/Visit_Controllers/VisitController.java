@@ -24,14 +24,4 @@ public class VisitController {
         System.out.println(allVisits);
         return "Visit_List";
     }
-
-    @GetMapping("/patientVisit/{patientCardId:[0-9]+}")
-    public String showPatientVisits (@PathVariable Long patientCardId, Model model) {
-        List<VisitDTO> visits = visitService.findByPatientId(patientCardId);
-        model.addAttribute("patientVisits", visits);
-        return "Patient_Visits";
-    }
-
-
-
 }
