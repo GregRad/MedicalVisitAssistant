@@ -20,6 +20,7 @@ public class PatientDTO {
     private String drugs;
     private String exam;
     private String patientData;
+    private String activity;
 
     public Long getId() {
         return id;
@@ -163,5 +164,13 @@ public class PatientDTO {
 
     public void setPatientData(String patientData) {
         this.patientData = patientData;
+    }
+
+    public String getActivity() {
+        return activity;
+    }
+
+    public void setActivity(String activity) {
+        this.activity = activity;
     }
 }

@@ -66,6 +66,7 @@ public class PatientService {
         findCardPatient.setDiagnosis(patientCard.getDiagnosis());
         findCardPatient.setSymptoms(patientCard.getSymptoms());
         findCardPatient.setFunctioning(patientCard.getFunctioning());
+        findCardPatient.setActivity(patientCard.getActivity());
         findCardPatient.setRehab(patientCard.getRehab());
         findCardPatient.setDrugs(patientCard.getDrugs());
         findCardPatient.setProcedures(patientCard.getProcedures());
@@ -106,6 +107,16 @@ public class PatientService {
     }
     public void editPatientCard (PatientDTO patientCard) {
         PatientCard editPatientCard = patientCardRepository.findOne(patientCard.getId());
+        editPatientCard.setDiagnosis(patientCard.getDiagnosis());
+        editPatientCard.setSymptoms(patientCard.getSymptoms());
+        editPatientCard.setDiseases(patientCard.getDiseases());
+        editPatientCard.setFunctioning(patientCard.getFunctioning());
+        editPatientCard.setActivity(patientCard.getActivity());
+        editPatientCard.setRehab(patientCard.getRehab());
+        editPatientCard.setProcedures(patientCard.getProcedures());
+        editPatientCard.setMedicines(patientCard.getMedicines());
+        editPatientCard.setDrugs(patientCard.getDrugs());
+
         patientCardRepository.save(editPatientCard);
     }
 }
