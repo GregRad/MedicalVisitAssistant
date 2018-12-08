@@ -57,4 +57,5 @@ public class Visit {
     public Patient getPatient() { return patient; }
 
     public void setPatient(Patient patient) { this.patient = patient; }
+
 }
