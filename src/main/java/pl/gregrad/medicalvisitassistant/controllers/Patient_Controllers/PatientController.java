@@ -26,7 +26,6 @@ public class PatientController {
     public String showPatients(Model model) {
         List<PatientDTO> allPatients = patientService.findAllPatients();
         model.addAttribute("patients", allPatients );
-        System.out.println(allPatients);
         return "Patient_List";
     }
     @GetMapping("/card/{id}")

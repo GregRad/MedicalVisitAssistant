@@ -1,25 +1,46 @@
 package pl.gregrad.medicalvisitassistant.dtos.Basic;
 
+import org.hibernate.validator.constraints.NotBlank;
+
+import javax.validation.constraints.NotNull;
+
 public class PatientDTO {
 
     private Long id;
+    @NotNull @NotBlank
     private String name;
+    @NotNull @NotBlank
     private String surname;
+    @NotNull @NotBlank
     private String address;
+    @NotNull @NotBlank
     private String houseNumber;
+    @NotNull @NotBlank
     private String apartmentNumber;
+    @NotNull @NotBlank
     private String phoneNumber;
     private String email;
+    @NotNull @NotBlank
     private String diagnosis;
+    @NotNull @NotBlank
     private String symptoms;
+    @NotNull @NotBlank
     private String diseases;
+    @NotNull @NotBlank
     private String rehab;
+    @NotNull @NotBlank
     private String functioning;
+    @NotNull @NotBlank
     private String medicines;
+    @NotNull @NotBlank
     private String procedures;
+    @NotNull @NotBlank
     private String drugs;
+    @NotNull @NotBlank
     private String exam;
+    @NotNull @NotBlank
     private String patientData;
+    @NotNull @NotBlank
     private String activity;
 
     public Long getId() {

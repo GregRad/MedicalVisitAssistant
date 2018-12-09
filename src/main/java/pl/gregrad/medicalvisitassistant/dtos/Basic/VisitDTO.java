@@ -1,16 +1,25 @@
 package pl.gregrad.medicalvisitassistant.dtos.Basic;
 
 
+import org.hibernate.validator.constraints.NotBlank;
+import org.springframework.format.annotation.DateTimeFormat;
 
+import javax.validation.constraints.NotNull;
 import java.time.LocalDateTime;
 
 public class VisitDTO {
 
+
     private Long id;
+    @DateTimeFormat(pattern = "dd/MM/yyyy HH:mm")
     private LocalDateTime visitDate;
+    @NotNull @NotBlank
     private Integer charge;
+    @NotNull @NotBlank
     private String visitDescription;
+    @NotNull @NotBlank
     private Long patientId;
+    @NotNull @NotBlank
     private String patientDetails;
 
 

@@ -23,7 +23,7 @@
 <div id="form">
     <form:form modelAttribute="editVisitForm" method="post"><br/>
         <br/>
-        <input type="datetime-local" class="add" name="visitDateRaw" placeholder="Data"/><br/>
+        <form:input path="visitDate" class="add" placeholder="Data"/><br/>
         <br/>
         <form:input path="charge" class="add" placeholder="Koszt"/><br/>
         <br/>

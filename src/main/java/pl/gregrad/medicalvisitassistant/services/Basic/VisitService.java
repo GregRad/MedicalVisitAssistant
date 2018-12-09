@@ -56,7 +56,6 @@ public class VisitService {
             patientVisit.setCharge(v.getCharge());
             patientVisit.setVisitDescription(v.getVisitDescription());
             visitByPatient.add(patientVisit);
-
         }
         return visitByPatient;
     }

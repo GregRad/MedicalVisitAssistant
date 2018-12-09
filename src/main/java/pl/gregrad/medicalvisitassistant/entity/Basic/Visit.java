@@ -1,8 +1,12 @@
 package pl.gregrad.medicalvisitassistant.entity.Basic;
 
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 import javax.persistence.*;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.time.LocalTime;
 
 @Entity
 @Table(name = "Visit")
@@ -10,6 +14,7 @@ public class Visit {
 
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
     private LocalDateTime visitDate;
     private Integer charge;
     private String visitDescription;
