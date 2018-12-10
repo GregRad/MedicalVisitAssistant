@@ -194,4 +194,29 @@ public class PatientDTO {
     public void setActivity(String activity) {
         this.activity = activity;
     }
+
+    @Override
+    public String toString() {
+        return "PatientDTO{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", surname='" + surname + '\'' +
+                ", address='" + address + '\'' +
+                ", houseNumber='" + houseNumber + '\'' +
+                ", apartmentNumber='" + apartmentNumber + '\'' +
+                ", phoneNumber='" + phoneNumber + '\'' +
+                ", email='" + email + '\'' +
+                ", diagnosis='" + diagnosis + '\'' +
+                ", symptoms='" + symptoms + '\'' +
+                ", diseases='" + diseases + '\'' +
+                ", rehab='" + rehab + '\'' +
+                ", functioning='" + functioning + '\'' +
+                ", medicines='" + medicines + '\'' +
+                ", procedures='" + procedures + '\'' +
+                ", drugs='" + drugs + '\'' +
+                ", exam='" + exam + '\'' +
+                ", patientData='" + patientData + '\'' +
+                ", activity='" + activity + '\'' +
+                '}';
+    }
 }

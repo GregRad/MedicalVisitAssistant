@@ -62,4 +62,16 @@ public class VisitDTO {
     public Long getPatientId() { return patientId; }
 
     public void setPatientId(Long patientId) { this.patientId = patientId; }
+
+    @Override
+    public String toString() {
+        return "VisitDTO{" +
+                "id=" + id +
+                ", visitDate=" + visitDate +
+                ", charge=" + charge +
+                ", visitDescription='" + visitDescription + '\'' +
+                ", patientId=" + patientId +
+                ", patientDetails='" + patientDetails + '\'' +
+                '}';
+    }
 }

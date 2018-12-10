@@ -26,6 +26,7 @@
         <br/>
     <form:form modelAttribute="patientForm" method="post">
         <form:input class="add" path="name" placeholder="Imię"/><br/>
+
         <br/>
         <form:input class="add" path="surname" placeholder="Nazwisko"/><br/>
         <br/>
@@ -38,6 +39,7 @@
         <form:input class="add" path="phoneNumber" placeholder="Numer telefonu"/><br/>
         <br/>
         <form:input class="add" path="email" placeholder="E-mail"/><br/>
+        <form:errors path="*"/>
         <br/>
         <br/>
     </div>
