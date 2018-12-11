@@ -28,7 +28,10 @@ public class AddPatientController {
     @PostMapping("/addPatient")
     public String addPatient(@ModelAttribute ("patientForm") @Valid PatientDTO form,
                              BindingResult results ) {
+        if (results.hasErrors()) {
+            return "Add_Patient_Form";
+        }
         addPatientService.addPatient(form);
-        return "Home_Page";
+        return "redirect:/patients/allPatients";
     }
 }

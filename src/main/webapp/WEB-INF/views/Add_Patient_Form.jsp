@@ -26,20 +26,25 @@
         <br/>
     <form:form modelAttribute="patientForm" method="post">
         <form:input class="add" path="name" placeholder="Imię"/><br/>
-
+        <form:errors path="name" cssClass="error"/>
         <br/>
         <form:input class="add" path="surname" placeholder="Nazwisko"/><br/>
+        <form:errors path="surname"/>
         <br/>
         <form:input class="add" path="address" placeholder="Ulica"/><br/>
+        <form:errors path="address"/>
         <br/>
         <form:input class="add" path="houseNumber" placeholder="Numer domu"/><br/>
+        <form:errors path="houseNumber"/>
         <br/>
         <form:input class="add" path="apartmentNumber" placeholder="Numer mieszkania"/><br/>
+        <form:errors path="apartmentNumber"/>
         <br/>
         <form:input class="add" path="phoneNumber" placeholder="Numer telefonu"/><br/>
+        <form:errors path="phoneNumber"/>
         <br/>
         <form:input class="add" path="email" placeholder="E-mail"/><br/>
-        <form:errors path="*"/>
+        <form:errors path="email"/>
         <br/>
         <br/>
     </div>
@@ -47,6 +52,7 @@
     <h4>Karta badania:</h4>
         <br/>
         <form:input class="add" path="diagnosis" placeholder="Rozpoznanie"/><br/>
+        <form:errors path="diagnosis"/>
         <br/>
         <form:input class="add" path="symptoms" placeholder="Objawy"/><br/>
         <br/>
