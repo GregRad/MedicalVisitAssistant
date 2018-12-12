@@ -4,22 +4,24 @@ package pl.gregrad.medicalvisitassistant.dtos.Basic;
 import org.hibernate.validator.constraints.NotBlank;
 import org.springframework.format.annotation.DateTimeFormat;
 
+import javax.validation.constraints.Digits;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Pattern;
 import java.time.LocalDateTime;
 
 public class VisitDTO {
 
 
     private Long id;
-    @DateTimeFormat(pattern = "dd/MM/yyyy HH:mm")
+    @NotNull (message = "Pole nie moze byc puste")
+    @DateTimeFormat (pattern = "dd/MM/yyyy HH:mm")
     private LocalDateTime visitDate;
-    @NotNull @NotBlank
-    private Integer charge;
-    @NotNull @NotBlank
+    @NotNull @NotBlank(message = "Pole nie może być puste")
+    @Digits (integer = 6, fraction = 1, message = "Wartość musi być liczbą")
+    private String charge;
+    @NotNull @NotBlank (message = "Pole nie może być puste")
     private String visitDescription;
-    @NotNull @NotBlank
     private Long patientId;
-    @NotNull @NotBlank
     private String patientDetails;
 
 
@@ -39,11 +41,11 @@ public class VisitDTO {
         this.visitDate = visitDate;
     }
 
-    public Integer getCharge() {
+    public String getCharge() {
         return charge;
     }
 
-    public void setCharge(Integer charge) {
+    public void setCharge(String charge) {
         this.charge = charge;
     }
 

@@ -4,7 +4,8 @@ package pl.gregrad.medicalvisitassistant.services.Basic;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import pl.gregrad.medicalvisitassistant.dtos.Basic.PatientDTO;
-import pl.gregrad.medicalvisitassistant.dtos.Basic.VisitDTO;
+import pl.gregrad.medicalvisitassistant.dtos.Basic.EditPatientCardDTO;
+import pl.gregrad.medicalvisitassistant.dtos.Basic.EditPatientDetailsDTO;
 import pl.gregrad.medicalvisitassistant.entity.Basic.Patient;
 import pl.gregrad.medicalvisitassistant.entity.Basic.PatientCard;
 import pl.gregrad.medicalvisitassistant.entity.Basic.PatientDetails;
@@ -91,7 +92,7 @@ public class PatientService {
         patientRepository.delete(patientRepository.findOne(id));
     }
 
-    public void editPatient(PatientDTO patient) {
+    public void editPatient(EditPatientDetailsDTO patient) {
         Patient editPatient = patientRepository.findOne(patient.getId());
         PatientDetails editPatientDetails = patientDetailsRepository.findOne(patient.getId());
         editPatient.setName(patient.getName());
@@ -105,7 +106,7 @@ public class PatientService {
         patientRepository.save(editPatient);
         patientDetailsRepository.save(editPatientDetails);
     }
-    public void editPatientCard (PatientDTO patientCard) {
+    public void editPatientCard (EditPatientCardDTO patientCard) {
         PatientCard editPatientCard = patientCardRepository.findOne(patientCard.getId());
         editPatientCard.setDiagnosis(patientCard.getDiagnosis());
         editPatientCard.setSymptoms(patientCard.getSymptoms());

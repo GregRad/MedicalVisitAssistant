@@ -5,7 +5,7 @@ import org.sonatype.inject.Nullable;
 
 import javax.validation.constraints.*;
 
-public class AddPatientDTO {
+public class PatientDTO {
 
     private Long id;
     @NotNull @NotBlank (message = "Pole nie może być puste")
@@ -200,7 +200,7 @@ public class AddPatientDTO {
 
     @Override
     public String toString() {
-        return "AddPatientDTO{" +
+        return "PatientDTO{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", surname='" + surname + '\'' +

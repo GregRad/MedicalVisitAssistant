@@ -16,7 +16,7 @@ public class Visit {
     private Long id;
 
     private LocalDateTime visitDate;
-    private Integer charge;
+    private String charge;
     private String visitDescription;
     private String patientDetails;
     @ManyToOne(optional = false, fetch = FetchType.EAGER)
@@ -39,11 +39,11 @@ public class Visit {
         this.visitDate = visitDate;
     }
 
-    public Integer getCharge() {
+    public String getCharge() {
         return charge;
     }
 
-    public void setCharge(Integer charge) {
+    public void setCharge(String charge) {
         this.charge = charge;
     }
 
