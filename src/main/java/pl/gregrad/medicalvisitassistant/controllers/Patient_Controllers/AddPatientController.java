@@ -11,27 +11,29 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import pl.gregrad.medicalvisitassistant.dtos.Basic.PatientDTO;
 import pl.gregrad.medicalvisitassistant.services.Basic.AddPatientService;
 
+
 import javax.validation.Valid;
 
 @Controller
-@RequestMapping("/patients")
+@RequestMapping("/patients/addPatient")
 public class AddPatientController {
 
     @Autowired
     private AddPatientService addPatientService;
 
-    @GetMapping("/addPatient")
+    @GetMapping
     public String showAddPatientForm (Model model) {
         model.addAttribute("patientForm", new PatientDTO());
         return "Add_Patient_Form";
     }
-    @PostMapping("/addPatient")
+    @PostMapping
     public String addPatient(@ModelAttribute ("patientForm") @Valid PatientDTO form,
-                             BindingResult results ) {
+                             BindingResult results) {
         if (results.hasErrors()) {
             return "Add_Patient_Form";
         }
         addPatientService.addPatient(form);
         return "redirect:/patients/allPatients";
+
     }
 }
