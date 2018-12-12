@@ -25,8 +25,9 @@
     <h4> Dane kontaktowe: </h4>
         <br/>
     <form:form modelAttribute="patientForm" method="post">
+
         <form:input class="add" path="name" placeholder="Imię"/><br/>
-        <form:errors path="name" cssClass="error"/>
+        <form:errors path="name"/>
         <br/>
         <form:input class="add" path="surname" placeholder="Nazwisko"/><br/>
         <form:errors path="surname"/>
@@ -55,22 +56,32 @@
         <form:errors path="diagnosis"/>
         <br/>
         <form:input class="add" path="symptoms" placeholder="Objawy"/><br/>
+        <form:errors path="symptoms"/>
         <br/>
         <form:input class="add" path="diseases" placeholder="Choroby współistniejące"/><br/>
+        <form:errors path="diseases"/>
         <br/>
         <form:input class="add" path="functioning" placeholder="Funkcjonowanie"/><br/>
+        <form:errors path="functioning"/>
         <br/>
         <form:input class="add" path="activity" placeholder="Aktywność fizyczna"/><br/>
+        <form:errors path="activity"/>
         <br/>
         <form:input class="add" path="rehab" placeholder="Dotychczasowa rehabilitacja"/><br/>
+        <form:errors path="rehab"/>
         <br/>
         <form:input class="add" path="medicines" placeholder="Leki"/><br/>
+        <form:errors path="medicines"/>
         <br/>
         <form:input class="add" path="procedures" placeholder="Zabiegi operacyjne, urazy"/><br/>
+        <form:errors path="procedures"/>
         <br/>
         <form:input class="add" path="drugs" placeholder="Używki"/><br/>
+        <form:errors path="drugs"/>
         <br/>
         <form:textarea class="add" path="exam" placeholder="Badanie"/><br/>
+        <form:errors path="exam"/>
+        <br/>
         <br/>
         <input type="submit" id="confirm" value="Dodaj"/>
         <input type="reset" id="clear" value="Wyczyść"/>

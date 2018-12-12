@@ -108,6 +108,7 @@
         </td>
     </tr>
 </table>
+<p>Wizyty</p>
 <br/>
 <table>
     <th>ID</th>

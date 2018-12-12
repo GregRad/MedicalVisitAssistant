@@ -1,46 +1,49 @@
 package pl.gregrad.medicalvisitassistant.dtos.Basic;
 
 import org.hibernate.validator.constraints.NotBlank;
+import org.sonatype.inject.Nullable;
 
-import javax.validation.constraints.NotNull;
+import javax.validation.constraints.*;
 
-public class PatientDTO {
+public class AddPatientDTO {
 
     private Long id;
-    @NotNull @NotBlank
+    @NotNull @NotBlank (message = "Pole nie może być puste")
     private String name;
-    @NotNull @NotBlank
+    @NotNull @NotBlank (message = "Pole nie może być puste")
     private String surname;
-    @NotNull @NotBlank
+    @NotNull @NotBlank (message = "Pole nie może być puste")
     private String address;
-    @NotNull @NotBlank
+    @NotNull @NotBlank (message = "Pole nie może być puste")
     private String houseNumber;
-    @NotNull @NotBlank
+    @NotNull @NotBlank (message = "Pole nie może być puste")
     private String apartmentNumber;
-    @NotNull @NotBlank
+    @NotNull @NotBlank (message = "Pole nie może być puste")
+    @Pattern(regexp="[\\d]{6}", message = "Niepoprawny format numeru telefonu")
     private String phoneNumber;
+    @Email (message = "Niepoprawny email")
     private String email;
-    @NotNull @NotBlank
+
+    @NotNull @NotBlank (message = "Pole nie może być puste")
     private String diagnosis;
-    @NotNull @NotBlank
+    @NotNull @NotBlank (message = "Pole nie może być puste")
     private String symptoms;
-    @NotNull @NotBlank
+    @NotNull @NotBlank (message = "Pole nie może być puste")
     private String diseases;
-    @NotNull @NotBlank
+    @NotNull @NotBlank (message = "Pole nie może być puste")
     private String rehab;
-    @NotNull @NotBlank
+    @NotNull @NotBlank (message = "Pole nie może być puste")
     private String functioning;
-    @NotNull @NotBlank
+    @NotNull @NotBlank (message = "Pole nie może być puste")
     private String medicines;
-    @NotNull @NotBlank
+    @NotNull @NotBlank (message = "Pole nie może być puste")
     private String procedures;
-    @NotNull @NotBlank
+    @NotNull @NotBlank (message = "Pole nie może być puste")
     private String drugs;
-    @NotNull @NotBlank
+    @NotNull @NotBlank (message = "Pole nie może być puste")
     private String exam;
-    @NotNull @NotBlank
     private String patientData;
-    @NotNull @NotBlank
+    @NotNull @NotBlank (message = "Pole nie może być puste")
     private String activity;
 
     public Long getId() {
@@ -197,7 +200,7 @@ public class PatientDTO {
 
     @Override
     public String toString() {
-        return "PatientDTO{" +
+        return "AddPatientDTO{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", surname='" + surname + '\'' +

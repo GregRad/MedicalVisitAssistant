@@ -24,11 +24,15 @@
     <form:form modelAttribute="editVisitForm" method="post"><br/>
         <br/>
         <form:input path="visitDate" class="add" placeholder="Data"/><br/>
+        <form:errors path="visitDate"/>
         <br/>
         <form:input path="charge" class="add" placeholder="Koszt"/><br/>
+        <form:errors path="charge"/>
         <br/>
         <form:input path="visitDescription" class="add" placeholder="Opis"/><br/>
+        <form:errors path="visitDescription"/>
         <form:hidden path="patientId" /><br/>
+        <br/>
         <input type="submit" id="confirm" value="Dodaj"/> <br/>
         <input type="reset" id="clear" value="Wyczyść"/>
     </form:form>
