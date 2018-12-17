@@ -6,7 +6,7 @@ http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd"
     <persistence-unit name="wjsgd77q09k2vrh9">
         <properties>
             <property name="javax.persistence.jdbc.url"
-                      value="jdbc:mysql://z67w7tq14a24cih2:l86lz5urtksfb48c@cvktne7b4wbj4ks1.chr7pe7iynqr.eu-west-1.rds.amazonaws.com" />
+                      value="jdbc:mysql://cvktne7b4wbj4ks1.chr7pe7iynqr.eu-west-1.rds.amazonaws.com" />
             <property name="javax.persistence.jdbc.user" value="z67w7tq14a24cih2" />
             <property name="javax.persistence.jdbc.password" value="l86lz5urtksfb48c" />
             <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
