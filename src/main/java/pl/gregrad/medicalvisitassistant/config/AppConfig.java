@@ -34,7 +34,7 @@ public class AppConfig extends WebMvcConfigurerAdapter {
     @Bean
     public LocalEntityManagerFactoryBean entityManagerFactory() {
         LocalEntityManagerFactoryBean emfb = new LocalEntityManagerFactoryBean();
-        emfb.setPersistenceUnitName("medicalvisitassistant");
+        emfb.setPersistenceUnitName("wjsgd77q09k2vrh9");
         return emfb;
     }
     @Bean
