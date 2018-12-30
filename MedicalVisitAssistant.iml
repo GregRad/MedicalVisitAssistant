@@ -9,6 +9,7 @@
           <factory-entry name="Entities" />
           <factory-entry name="entityManagerFactory" />
           <factory-entry name="medicalvisitassistant" />
+          <factory-entry name="wjsgd77q09k2vrh9" />
         </datasource-mapping>
         <deploymentDescriptor name="persistence.xml" url="file://$MODULE_DIR$/src/main/resources/META-INF/persistence.xml" />
       </configuration>

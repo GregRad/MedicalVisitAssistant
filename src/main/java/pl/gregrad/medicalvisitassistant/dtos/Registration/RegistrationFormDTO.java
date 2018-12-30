@@ -8,17 +8,17 @@ import javax.validation.constraints.Size;
 
 public class RegistrationFormDTO {
 
-    @NotNull @NotBlank @Size(min = 5, max = 20)
+    @NotNull @NotBlank (message = "Pole nie może być puste") @Size(min = 5, max = 20, message = "Login musi mieć od 5 do 20 znaków" )
     private String login;
-    @NotNull @Email
+    @NotNull @NotBlank (message = "Pole nie może być puste") @Email (message = "Niepoprawny email")
     private String email;
-    @NotNull @NotBlank
+    @NotNull @NotBlank (message = "Pole nie może być puste")
     private String password;
-    @NotNull @NotBlank
+    @NotNull @NotBlank (message = "Pole nie może być puste")
     private String confirmedPassword;
-    @NotNull @NotBlank @Size(min = 3)
+    @NotNull @NotBlank (message = "Pole nie może być puste") @Size(min = 3, message = "Imię musi być dłuższe niż 3 znaki" )
     private String firstName;
-    @NotNull @NotBlank @Size(min = 3)
+    @NotNull @NotBlank (message = "Pole nie może być puste") @Size(min = 3, message = "Imię musi być dłuższe niż 3 znaki" )
     private String lastName;
 
     public String getLogin() {

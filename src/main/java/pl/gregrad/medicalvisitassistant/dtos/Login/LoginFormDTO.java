@@ -6,9 +6,9 @@ import javax.validation.constraints.NotNull;
 
 public class LoginFormDTO {
 
-    @NotNull @NotBlank
+    @NotNull @NotBlank (message = "Pole nie może być puste")
     private String login;
-    @NotNull @NotBlank
+    @NotNull @NotBlank (message = "Pole nie może być puste")
     private String password;
 
     public String getLogin() {
