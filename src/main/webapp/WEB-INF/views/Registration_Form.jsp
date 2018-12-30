@@ -12,17 +12,22 @@
         <form:form modelAttribute="regForm" method="post">
             <br/>
              <form:input class="register" path="login" placeholder="Login"/><br/>
-            <form:errors class="register" path="*" ></form:errors>
+            <form:errors path="login"/>
             <br/>
              <form:input class="register" path="email" placeholder="E-mail"/><br/>
+            <form:errors path="email"/>
             <br/>
              <form:password class="register" path="password" placeholder="Hasło"/><br/>
+            <form:errors path="password"/>
             <br/>
              <form:password class="register" path="confirmedPassword" placeholder="Potwierdź hasło"/><br/>
+            <form:errors path="confirmedPassword"/>
             <br/>
              <form:input class="register" path="firstName" placeholder="Imię"/><br/>
+            <form:errors path="firstName"/>
             <br/>
              <form:input class="register" path="lastName" placeholder="Nazwisko"/><br/>
+            <form:errors path="lastName"/>
             <br/>
             <input type="submit" value="Zarejestruj"/>
             <br/>
