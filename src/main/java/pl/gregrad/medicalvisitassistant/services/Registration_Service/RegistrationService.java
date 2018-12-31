@@ -1,6 +1,7 @@
 package pl.gregrad.medicalvisitassistant.services.Registration_Service;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import pl.gregrad.medicalvisitassistant.dtos.Registration.RegistrationFormDTO;
 import pl.gregrad.medicalvisitassistant.entity.Therapist.Therapist;
@@ -20,6 +21,9 @@ public class RegistrationService {
 
     @Autowired
     private TherapistDetailsRepository therapistDetailsRepository;
+
+    @Autowired
+    private PasswordEncoder passwordEncoder;
 
     public void register(RegistrationFormDTO form) {
         String login = form.getLogin();
@@ -47,7 +51,7 @@ public class RegistrationService {
 
         TherapistLogInData loginData = new TherapistLogInData();
         loginData.setTherapist(therapist);
-        loginData.setPassword(password);
+        loginData.setPassword(passwordEncoder.encode(password));
         therapistLoginDataRepository.save(loginData);
 
     }
