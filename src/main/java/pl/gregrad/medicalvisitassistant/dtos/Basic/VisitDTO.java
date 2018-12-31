@@ -8,6 +8,7 @@ import javax.validation.constraints.Digits;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
 import java.time.LocalDateTime;
+import java.util.Objects;
 
 public class VisitDTO {
 
@@ -64,6 +65,24 @@ public class VisitDTO {
     public Long getPatientId() { return patientId; }
 
     public void setPatientId(Long patientId) { this.patientId = patientId; }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        VisitDTO visitDTO = (VisitDTO) o;
+        return Objects.equals(id, visitDTO.id) &&
+                Objects.equals(visitDate, visitDTO.visitDate) &&
+                Objects.equals(charge, visitDTO.charge) &&
+                Objects.equals(visitDescription, visitDTO.visitDescription) &&
+                Objects.equals(patientId, visitDTO.patientId) &&
+                Objects.equals(patientDetails, visitDTO.patientDetails);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, visitDate, charge, visitDescription, patientId, patientDetails);
+    }
 
     @Override
     public String toString() {

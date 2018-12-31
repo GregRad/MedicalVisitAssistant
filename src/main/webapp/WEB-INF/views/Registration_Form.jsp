@@ -29,6 +29,7 @@
              <form:input class="register" path="lastName" placeholder="Nazwisko"/><br/>
             <form:errors path="lastName"/>
             <br/>
+        </form:form>
             <input type="submit" value="Zarejestruj"/>
             <br/>
             <input type="reset" value="Wyczyść"/>

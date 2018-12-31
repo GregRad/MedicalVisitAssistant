@@ -4,6 +4,7 @@ import org.hibernate.validator.constraints.NotBlank;
 import org.sonatype.inject.Nullable;
 
 import javax.validation.constraints.*;
+import java.util.Objects;
 
 public class PatientDTO {
 
@@ -196,6 +197,37 @@ public class PatientDTO {
 
     public void setActivity(String activity) {
         this.activity = activity;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        PatientDTO that = (PatientDTO) o;
+        return Objects.equals(id, that.id) &&
+                Objects.equals(name, that.name) &&
+                Objects.equals(surname, that.surname) &&
+                Objects.equals(address, that.address) &&
+                Objects.equals(houseNumber, that.houseNumber) &&
+                Objects.equals(apartmentNumber, that.apartmentNumber) &&
+                Objects.equals(phoneNumber, that.phoneNumber) &&
+                Objects.equals(email, that.email) &&
+                Objects.equals(diagnosis, that.diagnosis) &&
+                Objects.equals(symptoms, that.symptoms) &&
+                Objects.equals(diseases, that.diseases) &&
+                Objects.equals(rehab, that.rehab) &&
+                Objects.equals(functioning, that.functioning) &&
+                Objects.equals(medicines, that.medicines) &&
+                Objects.equals(procedures, that.procedures) &&
+                Objects.equals(drugs, that.drugs) &&
+                Objects.equals(exam, that.exam) &&
+                Objects.equals(patientData, that.patientData) &&
+                Objects.equals(activity, that.activity);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, name, surname, address, houseNumber, apartmentNumber, phoneNumber, email, diagnosis, symptoms, diseases, rehab, functioning, medicines, procedures, drugs, exam, patientData, activity);
     }
 
     @Override

@@ -3,6 +3,7 @@ package pl.gregrad.medicalvisitassistant.dtos.Basic;
 import org.hibernate.validator.constraints.NotBlank;
 
 import javax.validation.constraints.NotNull;
+import java.util.Objects;
 
 public class EditPatientCardDTO {
 
@@ -124,5 +125,47 @@ public class EditPatientCardDTO {
 
     public void setActivity(String activity) {
         this.activity = activity;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        EditPatientCardDTO that = (EditPatientCardDTO) o;
+        return Objects.equals(id, that.id) &&
+                Objects.equals(diagnosis, that.diagnosis) &&
+                Objects.equals(symptoms, that.symptoms) &&
+                Objects.equals(diseases, that.diseases) &&
+                Objects.equals(rehab, that.rehab) &&
+                Objects.equals(functioning, that.functioning) &&
+                Objects.equals(medicines, that.medicines) &&
+                Objects.equals(procedures, that.procedures) &&
+                Objects.equals(drugs, that.drugs) &&
+                Objects.equals(exam, that.exam) &&
+                Objects.equals(patientData, that.patientData) &&
+                Objects.equals(activity, that.activity);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, diagnosis, symptoms, diseases, rehab, functioning, medicines, procedures, drugs, exam, patientData, activity);
+    }
+
+    @Override
+    public String toString() {
+        return "EditPatientCardDTO{" +
+                "id=" + id +
+                ", diagnosis='" + diagnosis + '\'' +
+                ", symptoms='" + symptoms + '\'' +
+                ", diseases='" + diseases + '\'' +
+                ", rehab='" + rehab + '\'' +
+                ", functioning='" + functioning + '\'' +
+                ", medicines='" + medicines + '\'' +
+                ", procedures='" + procedures + '\'' +
+                ", drugs='" + drugs + '\'' +
+                ", exam='" + exam + '\'' +
+                ", patientData='" + patientData + '\'' +
+                ", activity='" + activity + '\'' +
+                '}';
     }
 }
