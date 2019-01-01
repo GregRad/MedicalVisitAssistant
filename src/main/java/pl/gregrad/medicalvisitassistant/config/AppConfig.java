@@ -1,5 +1,6 @@
 package pl.gregrad.medicalvisitassistant.config;
 
+
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -26,6 +27,8 @@ import javax.persistence.EntityManagerFactory;
 @EnableJpaRepositories(basePackages = "pl.gregrad.medicalvisitassistant.repositories")
 public class AppConfig extends WebMvcConfigurerAdapter {
 
+
+
     @Bean
     public ViewResolver viewResolver() {
         InternalResourceViewResolver viewResolver = new InternalResourceViewResolver();
@@ -50,13 +53,10 @@ public class AppConfig extends WebMvcConfigurerAdapter {
         return new LocalValidatorFactoryBean();
     }
 
-    @Bean
-    public PasswordEncoder passwordEncoder() {
-        return new BCryptPasswordEncoder();
-    }
 
     @Override
     public void configureDefaultServletHandling(DefaultServletHandlerConfigurer configurer) {
         configurer.enable();
     }
+
 }
