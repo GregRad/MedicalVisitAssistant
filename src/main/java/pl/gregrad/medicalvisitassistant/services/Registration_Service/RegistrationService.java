@@ -7,9 +7,11 @@ import pl.gregrad.medicalvisitassistant.dtos.Registration.RegistrationFormDTO;
 import pl.gregrad.medicalvisitassistant.entity.Therapist.Therapist;
 import pl.gregrad.medicalvisitassistant.entity.Therapist.TherapistDetails;
 import pl.gregrad.medicalvisitassistant.entity.Therapist.TherapistLogInData;
+import pl.gregrad.medicalvisitassistant.entity.Therapist.TherapistRole;
 import pl.gregrad.medicalvisitassistant.repositories.Therapist.TherapistDetailsRepository;
 import pl.gregrad.medicalvisitassistant.repositories.Therapist.TherapistLoginDataRepository;
 import pl.gregrad.medicalvisitassistant.repositories.Therapist.TherapistRepository;
+import pl.gregrad.medicalvisitassistant.repositories.Therapist.TherapistRoleRepository;
 
 @Service
 public class RegistrationService {
@@ -21,6 +23,9 @@ public class RegistrationService {
 
     @Autowired
     private TherapistDetailsRepository therapistDetailsRepository;
+
+    @Autowired
+    private TherapistRoleRepository therapistRoleRepository;
 
     @Autowired
     private PasswordEncoder passwordEncoder;
@@ -53,6 +58,11 @@ public class RegistrationService {
         loginData.setTherapist(therapist);
         loginData.setPassword(passwordEncoder.encode(password));
         therapistLoginDataRepository.save(loginData);
+
+        TherapistRole therapistRole = new TherapistRole();
+        therapistRole.setTherapist(therapist);
+        therapistRole.setRole("USER");
+        therapistRoleRepository.save(therapistRole);
 
     }
 }
