@@ -56,7 +56,8 @@ public class RegistrationService {
 
         TherapistLogInData loginData = new TherapistLogInData();
         loginData.setTherapist(therapist);
-        loginData.setPassword(passwordEncoder.encode(password));
+        loginData.setPassword(password);
+        //loginData.setPassword(passwordEncoder.encode(password));
         therapistLoginDataRepository.save(loginData);
 
         TherapistRole therapistRole = new TherapistRole();
