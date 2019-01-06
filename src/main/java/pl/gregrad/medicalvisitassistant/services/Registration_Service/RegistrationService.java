@@ -26,9 +26,7 @@ public class RegistrationService {
 
     @Autowired
     private TherapistRoleRepository therapistRoleRepository;
-
-    @Autowired
-    private PasswordEncoder passwordEncoder;
+    
 
     public void register(RegistrationFormDTO form) {
         String login = form.getLogin();
@@ -57,7 +55,6 @@ public class RegistrationService {
         TherapistLogInData loginData = new TherapistLogInData();
         loginData.setTherapist(therapist);
         loginData.setPassword(password);
-        //loginData.setPassword(passwordEncoder.encode(password));
         therapistLoginDataRepository.save(loginData);
 
         TherapistRole therapistRole = new TherapistRole();

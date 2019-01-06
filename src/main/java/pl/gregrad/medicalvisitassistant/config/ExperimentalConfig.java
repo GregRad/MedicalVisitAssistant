@@ -2,6 +2,7 @@ package pl.gregrad.medicalvisitassistant.config;
 
 import org.springframework.web.filter.CharacterEncodingFilter;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
+import pl.gregrad.medicalvisitassistant.filters.AccessFilter;
 
 import javax.servlet.Filter;
 
@@ -23,10 +24,11 @@ public class ExperimentalConfig extends AbstractAnnotationConfigDispatcherServle
 
     @Override
     protected Filter[] getServletFilters() {
-        CharacterEncodingFilter characterEncodingFilter =
-                new CharacterEncodingFilter();
+        CharacterEncodingFilter characterEncodingFilter = new CharacterEncodingFilter();
         characterEncodingFilter.setEncoding("UTF-8");
+        AccessFilter accessFilter = new AccessFilter();
         return new Filter[] {
+                accessFilter,
                 characterEncodingFilter };
     }
 }
