@@ -1,31 +1,61 @@
 package pl.gregrad.medicalvisitassistant.filters;
 
-import org.springframework.web.filter.OncePerRequestFilter;
+
 import pl.gregrad.medicalvisitassistant.dtos.Login.TherapistDTO;
 
 import javax.servlet.*;
+import javax.servlet.annotation.WebFilter;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
-
-public class AccessFilter extends OncePerRequestFilter {
+@WebFilter(urlPatterns = {"/patients/*", "/visit/*", "/stats"})
+public class AccessFilter implements Filter {
 
     @Override
-    protected void doFilterInternal(HttpServletRequest req, HttpServletResponse res, FilterChain chain) throws ServletException, IOException {
+    public void init(FilterConfig filterConfig) throws ServletException {
 
-        String url = req.getRequestURI();
-        if (!url.equals("/login")) {
-            HttpSession session = req.getSession();
-            TherapistDTO therapist = (TherapistDTO) session.getAttribute("loggedUser");
-            if (therapist == null) {
-                res.sendRedirect("/login");
-                return;
-            }
+    }
+    @Override
+    public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
+
+        HttpServletRequest req = (HttpServletRequest) request;
+        HttpServletResponse res = (HttpServletResponse) response;
+
+        HttpSession session = req.getSession();
+        TherapistDTO therapist = (TherapistDTO) session.getAttribute("loggedUser");
+
+        if (therapist == null) {
+            res.sendRedirect("/login");
+            return;
         }
-        chain.doFilter(req, res);
+        chain.doFilter(request, response);
+
+    }
+    @Override
+    public void destroy() {
+
     }
 }
+
+
+
+//public class AccessFilter extends OncePerRequestFilter {
+//
+//    @Override
+//    protected void doFilterInternal(HttpServletRequest req, HttpServletResponse res, FilterChain chain) throws ServletException, IOException {
+//
+//
+//            HttpSession session = req.getSession();
+//            TherapistDTO therapist = (TherapistDTO) session.getAttribute("loggedUser");
+//            if (therapist == null) {
+//                res.sendRedirect("/login");
+//                return;
+//            }
+//        chain.doFilter(req, res);
+//    }
+//
+//}
 
 
