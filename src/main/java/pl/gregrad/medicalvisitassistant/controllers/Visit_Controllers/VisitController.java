@@ -21,7 +21,6 @@ public class VisitController {
     public String showAllVisit (Model model) {
         List<VisitDTO> allVisits = visitService.findAllVisit();
         model.addAttribute("visits", allVisits);
-        System.out.println(allVisits);
         return "Visit_List";
     }
 }

@@ -1,5 +1,7 @@
 package pl.gregrad.medicalvisitassistant.entity.Basic;
 
+import com.sun.org.glassfish.external.statistics.Statistic;
+
 import javax.persistence.*;
 import java.util.List;
 
@@ -49,10 +51,6 @@ public class Patient {
         this.visit = visit;
     }
 
-    public PatientCard getPatientCard() { return patientCard;
-    }
-    public void setPatientCard(PatientCard patientCard) { this.patientCard = patientCard;
-    }
 
     public PatientDetails getPatientDetails() { return patientDetails; }
 

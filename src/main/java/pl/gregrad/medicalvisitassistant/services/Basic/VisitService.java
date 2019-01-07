@@ -59,6 +59,19 @@ public class VisitService {
         }
         return visitByPatient;
     }
+    public List<VisitDTO> getVisitDetails (Long id) {
+        List<Visit> patientVisits = visitRepository.findByPatientId(id);
+        List<VisitDTO> allPatientVisitsDetails = new ArrayList<>();
+        for ( Visit v : patientVisits) {
+            VisitDTO patientVisitsDetails = new VisitDTO();
+            patientVisitsDetails.setCharge(v.getCharge());
+            patientVisitsDetails.setVisitDate(v.getVisitDate());
+            allPatientVisitsDetails.add(patientVisitsDetails);
+        }
+        return allPatientVisitsDetails;
+
+
+    }
     public void delete (Long id) {
         visitRepository.delete(visitRepository.findOne(id));
     }
