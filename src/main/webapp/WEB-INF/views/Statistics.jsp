@@ -6,30 +6,27 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
     <title>Statystyki</title>
-    <style><%@include file="/css/table.css"%></style>
+    <link rel="stylesheet" href="/css/table.css">
 </head>
 <body>
-<div>
+<div id="navigation">
     <a href="/login"><img src="/images/navigation_Main_Page.png" title="Strona głowna"></a>
     <a href="/patients/addPatient"><img src="/images/navigation_Add_Patient.png" title="Dodaj pacjenta"></a>
     <a href="/patients/allPatients"><img src="/images/navigation_Patient_List.png" title="Lista pacjentów"></a>
     <a href="/visit/allVisits"><img src="/images/navigation_Visit_List.png" title="Lista wizyt"></a>
 </div>
+<p>Statystyki</p>
+<div id="table">
     <table>
-        <th>Ilość wizyt</th>
-        <th>Dochód</th>
-        <tr>
-            <td>
-                0
-            </td>
-            <td>
-                0
-            </td>
-        </tr>
+
     </table>
+    <div id="back">
+        <a href="/login"> <img src="/images/Arrow.png" alt="cofnij"></a>
+    </div>
 </body>
 </html>

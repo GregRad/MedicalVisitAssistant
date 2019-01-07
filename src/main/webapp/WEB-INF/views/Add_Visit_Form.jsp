@@ -24,7 +24,7 @@
 <div id="form">
     <form:form modelAttribute="visitForm" method="post" action="/visit/addVisit">
 
-        <form:input path="visitDate" class="add" placeholder="Data"/><br/>
+        <form:input path="visitDate" class="add" placeholder="Data (wzór: DD/MM/YY HH:MM)"/><br/>
         <form:errors path="visitDate"/>
         <br/>
          <form:input path="charge" class="add" placeholder="Koszt"/><br/>

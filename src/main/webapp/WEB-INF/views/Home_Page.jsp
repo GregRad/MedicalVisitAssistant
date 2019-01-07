@@ -29,7 +29,7 @@
          </div>
          <div class="row">
              <div class="column"><a href="/visit/allVisits"><img src="/images/Visit_List_Main.png" alt="Lista wizyt" width="222px" height="222px" title="Lista wizyt"/></a></div>
-             <div class="column"><a href=""><img src="/images/Stats_Main.png" alt="Statystyki" width="222px" height="222px" title="Statystyki"/></a></div>
+             <div class="column"><a href="/stats/details"><img src="/images/Stats_Main.png" alt="Statystyki" width="222px" height="222px" title="Statystyki"/></a></div>
          </div>
     </div>
 </div>
