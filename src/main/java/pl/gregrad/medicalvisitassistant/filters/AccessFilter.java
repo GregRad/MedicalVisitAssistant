@@ -40,22 +40,3 @@ public class AccessFilter implements Filter {
 }
 
 
-
-//public class AccessFilter extends OncePerRequestFilter {
-//
-//    @Override
-//    protected void doFilterInternal(HttpServletRequest req, HttpServletResponse res, FilterChain chain) throws ServletException, IOException {
-//
-//
-//            HttpSession session = req.getSession();
-//            TherapistDTO therapist = (TherapistDTO) session.getAttribute("loggedUser");
-//            if (therapist == null) {
-//                res.sendRedirect("/login");
-//                return;
-//            }
-//        chain.doFilter(req, res);
-//    }
-//
-//}
-
-

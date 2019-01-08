@@ -3,9 +3,7 @@ package pl.gregrad.medicalvisitassistant.services.Basic;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import pl.gregrad.medicalvisitassistant.dtos.Basic.VisitDTO;
-import pl.gregrad.medicalvisitassistant.entity.Basic.PatientCard;
 import pl.gregrad.medicalvisitassistant.entity.Basic.Visit;
-import pl.gregrad.medicalvisitassistant.repositories.Basic.PatientCardRepository;
 import pl.gregrad.medicalvisitassistant.repositories.Basic.VisitRepository;
 import javax.transaction.Transactional;
 import java.util.ArrayList;
@@ -59,19 +57,7 @@ public class VisitService {
         }
         return visitByPatient;
     }
-    public List<VisitDTO> getVisitDetails (Long id) {
-        List<Visit> patientVisits = visitRepository.findByPatientId(id);
-        List<VisitDTO> allPatientVisitsDetails = new ArrayList<>();
-        for ( Visit v : patientVisits) {
-            VisitDTO patientVisitsDetails = new VisitDTO();
-            patientVisitsDetails.setCharge(v.getCharge());
-            patientVisitsDetails.setVisitDate(v.getVisitDate());
-            allPatientVisitsDetails.add(patientVisitsDetails);
-        }
-        return allPatientVisitsDetails;
 
-
-    }
     public void delete (Long id) {
         visitRepository.delete(visitRepository.findOne(id));
     }
