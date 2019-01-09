@@ -1,6 +1,5 @@
 package pl.gregrad.medicalvisitassistant.entity.Basic;
 
-import com.sun.org.glassfish.external.statistics.Statistic;
 
 import javax.persistence.*;
 import java.util.List;
