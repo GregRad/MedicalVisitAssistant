@@ -7,6 +7,7 @@
 --%>
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -22,9 +23,25 @@
 </div>
 <p>Statystyki</p>
 <div id="table">
+</br>
+    Ogólne:
     <table>
-
+        <tr>
+        <th>Ilość wizyt:</th>
+        <th>Dochód (zł):</th>
+        </tr>
+        <tr>
+            <td>
+            ${fn:length(visits)}
+            </td>
+            <c:forEach var="visit" items="${visits}">
+                <c:set var="total" value="${total + visit.charge}"/>
+            </c:forEach>
+            <td>${total}
+            </td>
+        </tr>
     </table>
+
     <div id="back">
         <a href="/login"> <img src="/images/Arrow.png" alt="cofnij"></a>
     </div>
