@@ -7,6 +7,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -132,6 +133,21 @@
             </td>
         </tr>
     </c:forEach>
+</table>
+<table>
+    <tr>
+        <th colspan="2">Podsumowanie:</th>
+    </tr>
+    <tr>
+        <td> Ilośc wizyt:
+            ${fn:length(visits)}
+        </td>
+        <c:forEach var="visit" items="${visits}">
+            <c:set var="total" value="${total + visit.charge}"/>
+        </c:forEach>
+        <td> Dochód: ${total} zł
+        </td>
+    </tr>
 </table>
 <br/>
 <div id="back">

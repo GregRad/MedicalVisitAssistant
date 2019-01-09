@@ -12,6 +12,7 @@ import pl.gregrad.medicalvisitassistant.services.Basic.StatisticsService;
 import java.util.List;
 
 
+
 @Controller
 @RequestMapping("/stats")
 public class StatisticsController {

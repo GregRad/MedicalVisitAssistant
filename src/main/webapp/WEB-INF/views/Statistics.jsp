@@ -24,21 +24,79 @@
 <p>Statystyki</p>
 <div id="table">
 </br>
-    Ogólne:
     <table>
         <tr>
-        <th>Ilość wizyt:</th>
-        <th>Dochód (zł):</th>
+            <th colspan="2">Ogólne</th>
         </tr>
         <tr>
-            <td>
+            <td> Ilośc wizyt:
             ${fn:length(visits)}
             </td>
             <c:forEach var="visit" items="${visits}">
                 <c:set var="total" value="${total + visit.charge}"/>
             </c:forEach>
-            <td>${total}
+            <td> Dochód: ${total} zł
             </td>
+        </tr>
+    </table>
+    <table>
+        <tr>
+            <th colspan="2">Styczeń</th>
+            <th colspan="2">Luty</th>
+            <th colspan="2">Marzec</th>
+    </tr>
+    <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+    </tr>
+    </table>
+    <table>
+        <tr>
+            <th colspan="2">Kwiecień</th>
+            <th colspan="2">Maj</th>
+            <th colspan="2">Czerwiec</th>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+    <table>
+        <tr>
+            <th colspan="2">Lipiec</th>
+            <th colspan="2">Sierpień</th>
+            <th colspan="2">Wrzesień</th>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+    <table>
+        <tr>
+            <th colspan="2">Październik</th>
+            <th colspan="2">Listopad</th>
+            <th colspan="2">Grudzień</th>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
         </tr>
     </table>
 
