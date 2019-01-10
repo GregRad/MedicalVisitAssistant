@@ -4,7 +4,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import pl.gregrad.medicalvisitassistant.dtos.Basic.VisitDTO;
 import pl.gregrad.medicalvisitassistant.entity.Basic.Visit;
-import pl.gregrad.medicalvisitassistant.repositories.Basic.PatientRepository;
 import pl.gregrad.medicalvisitassistant.repositories.Basic.VisitRepository;
 
 import javax.transaction.Transactional;
@@ -29,16 +28,15 @@ public class StatisticsService {
         return visitByPatient;
 
     }
-//    public List<VisitDTO> getByVisitDate(LocalDateTime date) {
-//        List<Visit> findVisitByDate = visitRepository.findByVisitDate(date);
-//        List<VisitDTO> allVisitsByDate = new ArrayList<>();
-//        for (Visit v : findVisitByDate) {
-//            VisitDTO visitsByDate = new VisitDTO();
-//            visitsByDate.setVisitDate(v.getVisitDate());
-//            visitsByDate.setCharge(v.getCharge());
-//            allVisitsByDate.add(visitsByDate);
-//        }
-//        return allVisitsByDate;
-//    }
+    public List<VisitDTO> getByVisitDate(Integer visitDate) {
+        List<Visit> findVisitByDate = visitRepository.findByVisitDate(visitDate);
+        List<VisitDTO> allVisitsByDate = new ArrayList<>();
+        for (Visit v : findVisitByDate) {
+            VisitDTO visitsByDate = new VisitDTO();
+            visitsByDate.setCharge(v.getCharge());
+            allVisitsByDate.add(visitsByDate);
+        }
+        return allVisitsByDate;
+    }
 
 }
