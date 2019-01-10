@@ -32,71 +32,62 @@
             <td> Ilośc wizyt:
             ${fn:length(visits)}
             </td>
-            <c:forEach var="visit" items="${visits}">
-                <c:set var="total" value="${total + visit.charge}"/>
-            </c:forEach>
-            <td> Dochód: ${total} zł
+            <td>
+                <c:forEach var="visit" items="${visits}">
+                    <c:set var="total" value="${total + visit.charge}"/>
+                </c:forEach>
+                Dochód: ${total} zł
             </td>
         </tr>
     </table>
     <table>
         <tr>
-            <th colspan="2">Styczeń</th>
-            <th colspan="2">Luty</th>
-            <th colspan="2">Marzec</th>
+            <th>Styczeń</th>
+            <th>Luty</th>
+            <th>Marzec</th>
     </tr>
     <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+        <td><a href="/stats/month/01"> >> </a></td>
+        <td><a href="/stats/month/02"> >> </a></td>
+        <td><a href="/stats/month/03"> >> </a></td>
     </tr>
     </table>
     <table>
         <tr>
-            <th colspan="2">Kwiecień</th>
-            <th colspan="2">Maj</th>
-            <th colspan="2">Czerwiec</th>
+            <th>Kwiecień</th>
+            <th>Maj</th>
+            <th>Czerwiec</th>
         </tr>
         <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td><a href="/stats/month/04"> >> </a></td>
+            <td><a href="/stats/month/05"> >> </a></td>
+            <td><a href="/stats/month/06"> >> </a></td>
+
         </tr>
     </table>
     <table>
         <tr>
-            <th colspan="2">Lipiec</th>
-            <th colspan="2">Sierpień</th>
-            <th colspan="2">Wrzesień</th>
+            <th>Lipiec</th>
+            <th>Sierpień</th>
+            <th>Wrzesień</th>
         </tr>
         <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td><a href="/stats/month/07"> >> </a></td>
+            <td><a href="/stats/month/08"> >> </a></td>
+            <td><a href="/stats/month/09"> >> </a></td>
+
         </tr>
     </table>
     <table>
         <tr>
-            <th colspan="2">Październik</th>
-            <th colspan="2">Listopad</th>
-            <th colspan="2">Grudzień</th>
+            <th>Październik</th>
+            <th>Listopad</th>
+            <th>Grudzień</th>
         </tr>
         <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td><a href="/stats/month/10"> >> </a></td>
+            <td><a href="/stats/month/11"> >> </a></td>
+            <td><a href="/stats/month/12"> >> </a></td>
         </tr>
     </table>
 
