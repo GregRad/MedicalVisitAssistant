@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import pl.gregrad.medicalvisitassistant.dtos.Basic.VisitDTO;
 import pl.gregrad.medicalvisitassistant.entity.Basic.Visit;
+import pl.gregrad.medicalvisitassistant.repositories.Basic.PatientRepository;
 import pl.gregrad.medicalvisitassistant.repositories.Basic.VisitRepository;
 
 import javax.transaction.Transactional;
@@ -16,6 +17,9 @@ public class StatisticsService {
 
     @Autowired
     private VisitRepository visitRepository;
+
+    @Autowired
+    private PatientRepository patientRepository;
 
     public List<VisitDTO> findAll() {
         List<Visit> patientVisits = visitRepository.findAll();
